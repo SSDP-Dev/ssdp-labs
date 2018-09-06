@@ -17,12 +17,14 @@ class PostsController < ApplicationController
   end
 
   def wysiwyg
-    @file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
-    @front_matter = @file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
-    @content = @file.content #=> 'Some actual content'
+    @file = post_params[:file]
+    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
+    @front_matter = @parsed_file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
+    @content = @parsed_file.content #=> 'Some actual content'
   end
 
   def write
+    @file = post_params[:file]
     @title = post_params[:title]
     @category = post_params[:category]
     @content = post_params[:Content]
