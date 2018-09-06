@@ -1,3 +1,4 @@
+require 'front_matter_parser'
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -15,7 +16,9 @@ class PostsController < ApplicationController
   end
 
   def wysiwyg
-    @file = File.read('./lib/assets/managed_site/content/blog/' + post_params[:file])
+    @file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
+    @front_matter = @file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
+    @content = @file.content #=> 'Some actual content'
   end
 
   # GET /posts/1

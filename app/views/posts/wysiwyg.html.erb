@@ -6,8 +6,9 @@
   <script>tinymce.init({ selector:'textarea' });</script>
 </head>
 <body>
+  <%= @front_matter %>
   <form>
-  <textarea><%= @file %></textarea>
+  <textarea><%= @content %></textarea>
   <button>Submit</button>
 </form>
 </body>
