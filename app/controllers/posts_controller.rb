@@ -1,4 +1,5 @@
 require 'front_matter_parser'
+require 'yaml'
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -19,6 +20,11 @@ class PostsController < ApplicationController
     @file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
     @front_matter = @file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
     @content = @file.content #=> 'Some actual content'
+  end
+
+  def write
+    puts "Write the file"
+    redirect_to posts_url    
   end
 
   # GET /posts/1

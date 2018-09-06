@@ -7,9 +7,11 @@
 </head>
 <body>
   <%= @front_matter %>
-  <form>
+  <%= form_for :anything, url: "write" do |form| %>
   <textarea><%= @content %></textarea>
-  <button>Submit</button>
+
+  <%= form.submit  %>
+<% end  %>
 </form>
 </body>
 </html>
