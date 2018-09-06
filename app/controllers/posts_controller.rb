@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       system('git fetch --all')
-      system("git reset --hard origin/master");
+      system('git reset --hard origin/master');
     end
     @files = Dir.entries('./lib/assets/managed_site/content/blog')
   end
@@ -35,6 +35,12 @@ class PostsController < ApplicationController
     f << "---\n"
     f << @content
     }
+    Dir.chdir('./lib/assets/managed_site') do
+      # Pull the repo using fetch/reset
+      system('git add -A')
+      system('git commit -m "Placeholder commit for now - this will have to be something else in production"')
+      system('git push');
+    end
   end
 
   # GET /posts/1
