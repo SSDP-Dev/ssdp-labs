@@ -11,11 +11,11 @@ class PostsController < ApplicationController
       system('git fetch --all')
       system("git reset --hard origin/master");
     end
-    @files = Dir.entries('./lib/assets/managed_site')
+    @files = Dir.entries('./lib/assets/managed_site/content/blog')
   end
 
   def wysiwyg
-    @file = File.read('./lib/assets/managed_site/' + post_params[:file])
+    @file = File.read('./lib/assets/managed_site/content/blog/' + post_params[:file])
   end
 
   # GET /posts/1
