@@ -23,8 +23,9 @@ class PostsController < ApplicationController
   end
 
   def write
-    puts "Write the file"
-    redirect_to posts_url    
+    @title = post_params[:title]
+    @category = post_params[:category]
+    @content = post_params[:Content]
   end
 
   # GET /posts/1
@@ -89,6 +90,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.permit(:file)
+      params.permit(:file, :Content, :title, :category)
     end
 end

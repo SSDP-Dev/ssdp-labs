@@ -1,0 +1,3398 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>development.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../app/assets/javascripts/posts_coffee.html">posts.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../app/assets/stylesheets/posts_scss.html">posts.scss</a>
+  
+    <li><a href="../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../app/views/posts/_post_json_jbuilder.html">_post.json.jbuilder</a>
+  
+    <li><a href="../app/views/posts/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../app/views/posts/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../lib/assets/managed_site/archetypes/default_md.html">default</a>
+  
+    <li><a href="../lib/assets/managed_site/config_toml.html">config.toml</a>
+  
+    <li><a href="../lib/assets/managed_site/content/_index_md.html">_index</a>
+  
+    <li><a href="../lib/assets/managed_site/content/blog/_index_md.html">_index</a>
+  
+    <li><a href="../lib/assets/managed_site/content/blog/blog1_md.html">blog1</a>
+  
+    <li><a href="../lib/assets/managed_site/content/blog/blog2_md.html">blog2</a>
+  
+    <li><a href="../lib/assets/managed_site/layouts/_default/list_html.html">list.html</a>
+  
+    <li><a href="../lib/assets/managed_site/layouts/_default/single_html.html">single.html</a>
+  
+    <li><a href="../lib/assets/managed_site/layouts/index_html.html">index.html</a>
+  
+    <li><a href="../lib/assets/managed_site/public/categories/index_xml.html">index.xml</a>
+  
+    <li><a href="../lib/assets/managed_site/public/index_html.html">index.html</a>
+  
+    <li><a href="../lib/assets/managed_site/public/index_xml.html">index.xml</a>
+  
+    <li><a href="../lib/assets/managed_site/public/sitemap_xml.html">sitemap.xml</a>
+  
+    <li><a href="../lib/assets/managed_site/public/tags/index_xml.html">index.xml</a>
+  
+    <li><a href="../lib/tasks/git_setup_rake.html">git_setup.rake</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../package_json.html">package.json</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+    <li><a href="../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/development.log">
+
+<p>Started GET “/” for 127.0.0.1 at 2018-09-05 22:18:10 -0600 Processing by
+Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /home/tyler/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /home/tyler/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)</pre>
+
+<p>Completed 200 OK in 198ms (Views: 4.1ms)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[1m[35m (342.5ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL PRIMARY KEY)[0m
+[1m[35m (337.8ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; varchar NOT NULL PRIMARY KEY, &quot;value&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Migrating to <a href="../CreatePosts.html">CreatePosts</a> (20180906042740)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE &quot;posts&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20180906042740&quot;]]
+[1m[35m (375.4ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;development&quot;], [&quot;created_at&quot;, &quot;2018-09-06 04:27:46.226919&quot;], [&quot;updated_at&quot;, &quot;2018-09-06 04:27:46.226919&quot;]]
+[1m[35m (199.3ms)[0m  [1m[36mcommit transaction[0m
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:28:23 -0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.6ms)</pre>
+
+<p>Completed 200 OK in 1726ms (Views: 1612.7ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:29:58 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML Completed 500 Internal Server Error in 2ms</p>
+
+<p>Errno::ENOENT (No such file or directory @ dir_initialize -
+/lib/assets/managed_site):</p>
+
+<p>app/controllers/posts_controller.rb:8:in `open&#39;
+app/controllers/posts_controller.rb:8:in `entries&#39;
+app/controllers/posts_controller.rb:8:in `index&#39; Started GET “/posts”
+for 127.0.0.1 at 2018-09-05 22:30:36 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (2.6ms)</pre>
+
+<p>Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.6ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:31:46 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.3ms)</pre>
+
+<p>Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:32:06 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (2.1ms)</pre>
+
+<p>Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:32:10 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (2.2ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.5ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:32:16 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.7ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:34:02 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:34:13 -0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:35:47 -0600</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.9ms)</pre>
+
+<p>Completed 200 OK in 1085ms (Views: 156.0ms | ActiveRecord: 1.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:37:19 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (7.7ms)</pre>
+
+<p>Completed 200 OK in 1263ms (Views: 33.6ms | ActiveRecord: 2.2ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:39:47 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.6ms)</pre>
+
+<p>Completed 200 OK in 1284ms (Views: 20.6ms | ActiveRecord: 0.1ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:40:10 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (8.6ms)</pre>
+
+<p>Completed 200 OK in 1809ms (Views: 41.0ms | ActiveRecord: 1.4ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:40:30 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.8ms)</pre>
+
+<p>Completed 200 OK in 1068ms (Views: 10.7ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:42:59 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (150.8ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1202ms (ActiveRecord: 2.1ms)</p>
+
+<p>ActionView::Template::Error (undefined local variable or method
+`posts_show_path&#39; for
+#&lt;#&lt;Class:0x007fa7b90b0190&gt;:0x007fa7b909fc28&gt; Did you mean? 
+posts_path):</p>
+
+<pre>37: 
+38: &lt;tr&gt;
+39:   &lt;td&gt;&lt;%= f %&gt;&lt;/td&gt;
+40:   &lt;td&gt;&lt;%= link_to &#39;Show&#39;, posts_show_path %&gt;&lt;/td&gt;
+41: &lt;/tr&gt;
+42: &lt;% end %&gt;
+43: &lt;/tbody&gt;</pre>
+
+<p>app/views/posts/index.html.erb:40:in `block in
+_app_views_posts_index_html_erb__2927936385927804485_70179170388840&#39;
+app/views/posts/index.html.erb:36:in `each&#39;
+app/views/posts/index.html.erb:36:in
+`_app_views_posts_index_html_erb__2927936385927804485_70179170388840&#39;
+Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:43:14 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (141.9ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1226ms (ActiveRecord: 0.3ms)</p>
+
+<p>ActionView::Template::Error (undefined local variable or method
+`show_posts_path&#39; for
+#&lt;#&lt;Class:0x007fa7b90b0190&gt;:0x007fa7b9ddae38&gt;):</p>
+
+<pre>37: 
+38: &lt;tr&gt;
+39:   &lt;td&gt;&lt;%= f %&gt;&lt;/td&gt;
+40:   &lt;td&gt;&lt;%= link_to &#39;Show&#39;, show_posts_path %&gt;&lt;/td&gt;
+41: &lt;/tr&gt;
+42: &lt;% end %&gt;
+43: &lt;/tbody&gt;</pre>
+
+<p>app/views/posts/index.html.erb:40:in `block in
+_app_views_posts_index_html_erb__2927936385927804485_70179177290800&#39;
+app/views/posts/index.html.erb:36:in `each&#39;
+app/views/posts/index.html.erb:36:in
+`_app_views_posts_index_html_erb__2927936385927804485_70179177290800&#39;
+Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:43:29 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (142.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1143ms (ActiveRecord: 0.3ms)</p>
+
+<p>ActionView::Template::Error (undefined local variable or method
+`show_post_path&#39; for
+#&lt;#&lt;Class:0x007fa7b90b0190&gt;:0x007fa7b9e517b8&gt; Did you mean? 
+posts_path):</p>
+
+<pre>37: 
+38: &lt;tr&gt;
+39:   &lt;td&gt;&lt;%= f %&gt;&lt;/td&gt;
+40:   &lt;td&gt;&lt;%= link_to &#39;Show&#39;, show_post_path %&gt;&lt;/td&gt;
+41: &lt;/tr&gt;
+42: &lt;% end %&gt;
+43: &lt;/tbody&gt;</pre>
+
+<p>app/views/posts/index.html.erb:40:in `block in
+_app_views_posts_index_html_erb__2927936385927804485_70179177533700&#39;
+app/views/posts/index.html.erb:36:in `each&#39;
+app/views/posts/index.html.erb:36:in
+`_app_views_posts_index_html_erb__2927936385927804485_70179177533700&#39;
+Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:45:28 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 1176ms (Views: 30.0ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:45:33 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 1471ms (Views: 33.6ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:48:52 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.9ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1127ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: unknown
+regexp options - td
+/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: unmatched
+close parenthesis: /something );@output_buffer.safe_append=&#39;&lt;/
+/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:41: syntax
+error, unexpected &#39;&lt;&#39; &lt;/tr&gt;</p>
+
+<pre>^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:43: unknown
+regexp options - tbdy
+/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:44: syntax
+error, unexpected &#39;&lt;&#39; &lt;/table&gt;</p>
+
+<pre>^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:44:
+unterminated regexp meets end of file):</p>
+
+<p>app/views/posts/index.html.erb:40: unknown regexp options - td
+app/views/posts/index.html.erb:40: unmatched close parenthesis: /something
+);@output_buffer.safe_append=&#39;&lt;/ app/views/posts/index.html.erb:41:
+syntax error, unexpected &#39;&lt;&#39; app/views/posts/index.html.erb:43:
+unknown regexp options - tbdy app/views/posts/index.html.erb:44: syntax
+error, unexpected &#39;&lt;&#39; app/views/posts/index.html.erb:44:
+unterminated regexp meets end of file Started GET “/posts” for 127.0.0.1 at
+2018-09-05 22:49:11 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.2ms)</pre>
+
+<p>Completed 200 OK in 1135ms (Views: 33.1ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/something” for 127.0.0.1 at 2018-09-05 22:49:18 -0600</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/something”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 22:49:21 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.5ms)</pre>
+
+<p>Completed 200 OK in 930ms (Views: 32.1ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/something” for 127.0.0.1 at 2018-09-05 22:49:29 -0600</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/something”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 22:49:31 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.5ms)</pre>
+
+<p>Completed 200 OK in 1129ms (Views: 39.3ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:50:49 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (146.1ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1178ms (ActiveRecord: 1.8ms)</p>
+
+<p>ActionView::Template::Error (undefined local variable or method
+`wysiwyg_post_path&#39; for
+#&lt;#&lt;Class:0x007fa7bb2e3190&gt;:0x007fa7bb2e1520&gt;):</p>
+
+<pre>37: 
+38: &lt;tr&gt;
+39:   &lt;td&gt;&lt;%= f %&gt;&lt;/td&gt;
+40:   &lt;td&gt;&lt;%= link_to &#39;Show&#39;, wysiwyg_post_path %&gt;&lt;/td&gt;
+41: &lt;/tr&gt;
+42: &lt;% end %&gt;
+43: &lt;/tbody&gt;</pre>
+
+<p>app/views/posts/index.html.erb:40:in `block in
+_app_views_posts_index_html_erb__2927936385927804485_70179188317460&#39;
+app/views/posts/index.html.erb:36:in `each&#39;
+app/views/posts/index.html.erb:36:in
+`_app_views_posts_index_html_erb__2927936385927804485_70179188317460&#39;
+Started GET “/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:51:26 -0600
+Processing by <a
+href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 108ms (ActiveRecord: 0.9ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:53:38 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:53:40 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:53:56 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:54:00 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:54:18 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:54:19 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:54:40 -0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 8ms (ActiveRecord: 0.5ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:54:47 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts/wysiwyg” for 127.0.0.1 at 2018-09-05 22:54:48 -0600 Processing by
+<a href="../PostsController.html#method-i-show">PostsController#show</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;id&quot;=&gt;&quot;wysiwyg&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;id&quot; = ? LIMIT ?[0m  [[&quot;id&quot;, 0], [&quot;LIMIT&quot;, 1]]</pre>
+
+<p>Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)</p>
+
+<p>ActiveRecord::RecordNotFound (Couldn&#39;t find <a
+href="../Post.html">Post</a> with &#39;id&#39;=wysiwyg):</p>
+
+<p>app/controllers/posts_controller.rb:77:in `set_post&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 22:54:53 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (7.4ms)</pre>
+
+<p>Completed 200 OK in 1044ms (Views: 138.4ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:54:56 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (4.8ms)</pre>
+
+<p>Completed 200 OK in 953ms (Views: 35.7ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:55:04 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (4.6ms)</pre>
+
+<p>Completed 200 OK in 3437ms (Views: 34.2ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 22:55:11 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 406 Not Acceptable in 17ms (ActiveRecord: 0.0ms)</p>
+
+<p>ActionController::UnknownFormat (PostsController#wysiwyg is missing a
+template for this request format and variant.</p>
+
+<p>request.formats: [“text/html”] request.variant: []</p>
+
+<p>NOTE! For XHR/Ajax or API requests, this action would normally respond with
+204 No Content: an empty white screen. Since you&#39;re loading it in a web
+browser, we assume that you expected to actually render a template, not
+nothing, so we&#39;re showing an error to be extra-clear. If you expect 204
+No Content, carry on. That&#39;s what you&#39;ll get from an XHR or API
+request. Give it a shot.):</p>
+
+<p>actionpack (5.1.6) lib/action_controller/metal/implicit_render.rb:53:in
+`default_render&#39; actionpack (5.1.6)
+lib/action_controller/metal/basic_implicit_render.rb:4:in `block in
+send_action&#39; actionpack (5.1.6)
+lib/action_controller/metal/basic_implicit_render.rb:4:in `tap&#39;
+actionpack (5.1.6)
+lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action&#39;
+actionpack (5.1.6) lib/abstract_controller/base.rb:186:in
+`process_action&#39; actionpack (5.1.6)
+lib/action_controller/metal/rendering.rb:30:in `process_action&#39;
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:20:in `block in
+process_action&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:131:in `run_callbacks&#39; actionpack
+(5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in
+`process_action&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:32:in `block in
+process_action&#39; activesupport (5.1.6)
+lib/active_support/notifications.rb:166:in `block in instrument&#39;
+activesupport (5.1.6)
+lib/active_support/notifications/instrumenter.rb:21:in `instrument&#39;
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in
+`instrument&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:30:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in
+`process_action&#39; activerecord (5.1.6)
+lib/active_record/railties/controller_runtime.rb:22:in `process_action&#39;
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process&#39;
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in
+`dispatch&#39; actionpack (5.1.6)
+lib/action_dispatch/routing/route_set.rb:31:in `serve&#39; actionpack
+(5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in
+`call&#39; rack (2.0.5) lib/rack/etag.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/conditional_get.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/head.rb:12:in `call&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:232:in `context&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:226:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/cookies.rb:613:in `call&#39; activerecord
+(5.1.6) lib/active_record/migration.rb:556:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:26:in `block in call&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in
+`run_callbacks&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:24:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call&#39;
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 22:55:33 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 22:55:34 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:56:19 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (13.7ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1258ms (ActiveRecord: 0.3ms)</p>
+
+<p>ActionView::Template::Error (undefined method `stringify_keys&#39; for
+“.”:String):</p>
+
+<pre>37: 
+38: &lt;tr&gt;
+39:   &lt;td&gt;&lt;%= f %&gt;&lt;/td&gt;
+40:   &lt;td&gt;&lt;%= link_to &#39;Something&#39;, &quot;/wysiwyg&quot;, f %&gt;&lt;/td&gt;
+41: &lt;/tr&gt;
+42: &lt;% end %&gt;
+43: &lt;/tbody&gt;</pre>
+
+<p>app/views/posts/index.html.erb:40:in `block in
+_app_views_posts_index_html_erb__794940793303034801_70120415355360&#39;
+app/views/posts/index.html.erb:36:in `each&#39;
+app/views/posts/index.html.erb:36:in
+`_app_views_posts_index_html_erb__794940793303034801_70120415355360&#39;
+Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:58:13 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.9ms)</pre>
+
+<p>Completed 200 OK in 988ms (Views: 16.8ms | ActiveRecord: 0.2ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:58:47 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (92.2ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1134ms (ActiveRecord: 0.3ms)</p>
+
+<p>ActionView::Template::Error (undefined method `wysiwyg_post_path&#39; for
+#&lt;#&lt;Class:0x007f8c60467e88&gt;:0x007f8c60bf2720&gt; Did you mean? 
+wysiwyg_path):</p>
+
+<pre>37: 
+38: &lt;tr&gt;
+39:   &lt;td&gt;&lt;%= f %&gt;&lt;/td&gt;
+40:   &lt;td&gt;&lt;%= link_to &#39;Something&#39;, wysiwyg_post_path(f) %&gt;&lt;/td&gt;
+41: &lt;/tr&gt;
+42: &lt;% end %&gt;
+43: &lt;/tbody&gt;</pre>
+
+<p>app/views/posts/index.html.erb:40:in `block in
+_app_views_posts_index_html_erb__794940793303034801_70120447646120&#39;
+app/views/posts/index.html.erb:36:in `each&#39;
+app/views/posts/index.html.erb:36:in
+`_app_views_posts_index_html_erb__794940793303034801_70120447646120&#39;
+Started GET “/posts” for 127.0.0.1 at 2018-09-05 22:58:58 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (6.2ms)</pre>
+
+<p>Completed 200 OK in 1092ms (Views: 40.6ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg.archetypes” for 127.0.0.1 at 2018-09-05 22:59:08
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg.archetypes” for 127.0.0.1 at 2018-09-05 23:00:24
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:00:34 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.9ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1105ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: syntax
+error, unexpected &#39;:&#39;, expecting &#39;}&#39; omething&#39;,
+wysiwyg_path {file: f} );@output_buffer.safe_appe</p>
+
+<pre>^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:42: syntax
+error, unexpected keyword_end, expecting &#39;)&#39; &#39;.freeze; end</p>
+
+<pre>^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:47: syntax
+error, unexpected keyword_ensure, expecting &#39;)&#39;</p>
+
+<pre>ensure
+      ^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:49: syntax
+error, unexpected keyword_end, expecting &#39;)&#39;</p>
+
+<pre>end
+   ^):</pre>
+
+<p>app/views/posts/index.html.erb:40: syntax error, unexpected &#39;:&#39;,
+expecting &#39;}&#39; app/views/posts/index.html.erb:42: syntax error,
+unexpected keyword_end, expecting &#39;)&#39;
+app/views/posts/index.html.erb:47: syntax error, unexpected keyword_ensure,
+expecting &#39;)&#39; app/views/posts/index.html.erb:49: syntax error,
+unexpected keyword_end, expecting &#39;)&#39; Started GET “/posts” for
+127.0.0.1 at 2018-09-05 23:00:50 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.7ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1066ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: syntax
+error, unexpected &#39;:&#39;, expecting &#39;}&#39; to &#39;SHow&#39;,
+wysiwyg_path {file: f} );@output_buffer.safe_appe</p>
+
+<pre>^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:42: syntax
+error, unexpected keyword_end, expecting &#39;)&#39; &#39;.freeze; end</p>
+
+<pre>^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:47: syntax
+error, unexpected keyword_ensure, expecting &#39;)&#39;</p>
+
+<pre>ensure
+      ^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:49: syntax
+error, unexpected keyword_end, expecting &#39;)&#39;</p>
+
+<pre>end
+   ^):</pre>
+
+<p>app/views/posts/index.html.erb:40: syntax error, unexpected &#39;:&#39;,
+expecting &#39;}&#39; app/views/posts/index.html.erb:42: syntax error,
+unexpected keyword_end, expecting &#39;)&#39;
+app/views/posts/index.html.erb:47: syntax error, unexpected keyword_ensure,
+expecting &#39;)&#39; app/views/posts/index.html.erb:49: syntax error,
+unexpected keyword_end, expecting &#39;)&#39; Started GET “/posts” for
+127.0.0.1 at 2018-09-05 23:01:05 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.8ms)</pre>
+
+<p>Completed 200 OK in 2418ms (Views: 32.3ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:01:11 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:01:49 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:01:56 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 23:02:27 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {:file})
+                           ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:02:29 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {:file})
+                           ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:02:48 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {file})
+                          ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:02:49 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {file})
+                          ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:03:07 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (7.4ms)</pre>
+
+<p>Completed 200 OK in 1372ms (Views: 29.3ms | ActiveRecord: 1.4ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:03:10 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:03:19 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:03:23 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:03:51 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 0ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 23:03:55 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (7.9ms)</pre>
+
+<p>Completed 200 OK in 944ms (Views: 31.9ms | ActiveRecord: 1.4ms)</p>
+
+<p>Started GET “/wysiwyg.content” for 127.0.0.1 at 2018-09-05 23:03:58 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as  Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg.content” for 127.0.0.1 at 2018-09-05 23:04:13 -0600 Processing by
+<a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as  Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 23:04:16 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1106ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: syntax
+error, unexpected tIDENTIFIER, expecting &#39;)&#39;</p>
+
+<pre>&#39;Show&#39;, wysiwyg_path, :file f );@output_buffer.safe_append=
+                             ^):</pre>
+
+<p>app/views/posts/index.html.erb:40: syntax error, unexpected tIDENTIFIER,
+expecting &#39;)&#39; Started GET “/posts” for 127.0.0.1 at 2018-09-05
+23:04:19 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.8ms)</pre>
+
+<p>Completed 500 Internal Server Error in 942ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: syntax
+error, unexpected tIDENTIFIER, expecting &#39;)&#39;</p>
+
+<pre>&#39;Show&#39;, wysiwyg_path, :file f );@output_buffer.safe_append=
+                             ^):</pre>
+
+<p>app/views/posts/index.html.erb:40: syntax error, unexpected tIDENTIFIER,
+expecting &#39;)&#39; Started GET “/posts” for 127.0.0.1 at 2018-09-05
+23:04:59 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.7ms)</pre>
+
+<p>Completed 200 OK in 985ms (Views: 31.2ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:05:02 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:05:54 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 11.1ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:05:56 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (4.0ms)</pre>
+
+<p>Completed 200 OK in 1118ms (Views: 23.0ms | ActiveRecord: 0.8ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:05:58 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:06:21 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (4.1ms)</pre>
+
+<p>Completed 200 OK in 1222ms (Views: 32.3ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:06:23 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:06:35 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:06:38 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 0ms</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 23:06:45 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (7.8ms)</pre>
+
+<p>Completed 200 OK in 1066ms (Views: 37.1ms | ActiveRecord: 1.4ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:06:54 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:17:
+syntax error, unexpected tSYMBEG, expecting &#39;)&#39;</p>
+
+<pre>def wysiwyg(:file)
+             ^</pre>
+
+<p>/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:85:
+syntax error, unexpected keyword_end, expecting end-of-input):</p>
+
+<p>app/controllers/posts_controller.rb:17: syntax error, unexpected tSYMBEG,
+expecting &#39;)&#39; app/controllers/posts_controller.rb:85: syntax error,
+unexpected keyword_end, expecting end-of-input Started GET “/posts” for
+127.0.0.1 at 2018-09-05 23:07:53 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (2.1ms)</pre>
+
+<p>Completed 200 OK in 918ms (Views: 11.0ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:07:56 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)</p>
+
+<p>ArgumentError (wrong number of arguments (given 0, expected 1)):</p>
+
+<p>app/controllers/posts_controller.rb:17:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:09:03 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 77ms</p>
+
+<p>NameError (undefined local variable or method `file&#39; for
+#&lt;PostsController:0x007f8c5d0fb108&gt; Did you mean?  fail):</p>
+
+<p>app/controllers/posts_controller.rb:83:in `post_params&#39;
+app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:09:08 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 107ms</p>
+
+<p>NameError (undefined local variable or method `file&#39; for
+#&lt;PostsController:0x007f8c5ce8ef50&gt; Did you mean?  fail):</p>
+
+<p>app/controllers/posts_controller.rb:83:in `post_params&#39;
+app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/wysiwyg” for 127.0.0.1 at 2018-09-05 23:09:21 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {:file})
+                           ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:09:29 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {:file})
+                           ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:09:33 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {:file})
+                           ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/posts” for 127.0.0.1 at
+2018-09-05 23:09:48 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (2.3ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1150ms</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: syntax
+error, unexpected tSYMBEG, expecting keyword_do or &#39;{&#39; or
+&#39;(&#39; wyg_path(:file =&gt; f), method :post );@output_buffer.safe_app</p>
+
+<pre>^):</pre>
+
+<p>app/views/posts/index.html.erb:40: syntax error, unexpected tSYMBEG,
+expecting keyword_do or &#39;{&#39; or &#39;(&#39; Started GET “/posts” for
+127.0.0.1 at 2018-09-05 23:11:32 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.8ms)</pre>
+
+<p>Completed 500 Internal Server Error in 983ms</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:40: syntax
+error, unexpected tSYMBEG, expecting keyword_do or &#39;{&#39; or
+&#39;(&#39; wyg_path(:file =&gt; f), method :post );@output_buffer.safe_app</p>
+
+<pre>^):</pre>
+
+<p>app/views/posts/index.html.erb:40: syntax error, unexpected tSYMBEG,
+expecting keyword_do or &#39;{&#39; or &#39;(&#39; Started GET “/posts” for
+127.0.0.1 at 2018-09-05 23:11:58 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (2.3ms)</pre>
+
+<p>Completed 200 OK in 1077ms (Views: 11.6ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/wysiwyg?file=content” for 127.0.0.1 at 2018-09-05 23:12:03
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;content&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms)</p>
+
+<p>NameError (undefined local variable or method `file&#39; for
+#&lt;PostsController:0x007f8c6c6a4488&gt; Did you mean?  fail):</p>
+
+<p>app/controllers/posts_controller.rb:83:in `post_params&#39;
+app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=content” for 127.0.0.1 at 2018-09-05 23:12:22 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;content&quot;}</pre>
+
+<p>Completed 400 Bad Request in 0ms</p>
+
+<p>ActionController::ParameterMissing (param is missing or the value is empty:
+post):</p>
+
+<p>app/controllers/posts_controller.rb:83:in `post_params&#39;
+app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=content” for 127.0.0.1 at 2018-09-05 23:13:11 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post, {:file})
+                           ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/wysiwyg?file=content” for
+127.0.0.1 at 2018-09-05 23:13:26 -0600</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/controllers/posts_controller.rb:83:
+syntax error, unexpected &#39;}&#39;, expecting =&gt;</p>
+
+<pre>params.fetch(:post =&gt; {:file})
+                             ^):</pre>
+
+<p>app/controllers/posts_controller.rb:83: syntax error, unexpected
+&#39;}&#39;, expecting =&gt; Started GET “/wysiwyg?file=content” for
+127.0.0.1 at 2018-09-05 23:14:45 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;content&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 18ms (Views: 17.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=layouts” for 127.0.0.1 at 2018-09-05 23:14:48
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;layouts&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 8.3ms)</p>
+
+<p>Started GET “/wysiwyg?file=config.toml” for 127.0.0.1 at 2018-09-05
+23:14:51 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;config.toml&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 14ms (Views: 13.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:16:24 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (8.4ms)</pre>
+
+<p>Completed 200 OK in 1126ms (Views: 37.8ms | ActiveRecord: 1.5ms)</p>
+
+<p>Started GET “/wysiwyg?file=content” for 127.0.0.1 at 2018-09-05 23:16:26
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;content&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Errno::EISDIR (Is a directory @ io_fread -
+./lib/assets/managed_site/content):</p>
+
+<p>app/controllers/posts_controller.rb:18:in `read&#39;
+app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/posts” for 127.0.0.1 at 2018-09-05 23:16:37 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (4.6ms)</pre>
+
+<p>Completed 200 OK in 933ms (Views: 33.9ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg?file=config.toml” for 127.0.0.1 at 2018-09-05
+23:16:42 -0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;config.toml&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:20:29 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (8.8ms)</pre>
+
+<p>Completed 200 OK in 1449ms (Views: 29.4ms | ActiveRecord: 1.7ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:20:32
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Errno::ENOENT (No such file or directory @ rb_sysopen -
+./lib/assets/managed_site/content/blogblog1.md):</p>
+
+<p>app/controllers/posts_controller.rb:18:in `read&#39;
+app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:20:46 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.5ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:20:48 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (8.3ms)</pre>
+
+<p>Completed 200 OK in 922ms (Views: 37.3ms | ActiveRecord: 1.7ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:22:59 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (3.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1122ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:47: syntax
+error, unexpected keyword_ensure, expecting keyword_end</p>
+
+<pre>ensure
+      ^):</pre>
+
+<p>app/views/posts/index.html.erb:47: syntax error, unexpected keyword_ensure,
+expecting keyword_end Started GET “/posts” for 127.0.0.1 at 2018-09-05
+23:23:11 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.8ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1058ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:47: syntax
+error, unexpected keyword_ensure, expecting keyword_end</p>
+
+<pre>ensure
+      ^):</pre>
+
+<p>app/views/posts/index.html.erb:47: syntax error, unexpected keyword_ensure,
+expecting keyword_end Started GET “/posts” for 127.0.0.1 at 2018-09-05
+23:23:57 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (2.8ms)</pre>
+
+<p>Completed 500 Internal Server Error in 951ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:47: syntax
+error, unexpected keyword_ensure, expecting keyword_end</p>
+
+<pre>ensure
+      ^):</pre>
+
+<p>app/views/posts/index.html.erb:47: syntax error, unexpected keyword_ensure,
+expecting keyword_end Started GET “/posts” for 127.0.0.1 at 2018-09-05
+23:24:00 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+Rendered posts/index.html.erb within layouts/application (1.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 1243ms (ActiveRecord: 0.0ms)</p>
+
+<p>SyntaxError
+(/home/tyler/ogden/github-clone/app/views/posts/index.html.erb:47: syntax
+error, unexpected keyword_ensure, expecting keyword_end</p>
+
+<pre>ensure
+      ^):</pre>
+
+<p>app/views/posts/index.html.erb:47: syntax error, unexpected keyword_ensure,
+expecting keyword_end Started GET “/posts” for 127.0.0.1 at 2018-09-05
+23:24:31 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 987ms (Views: 26.4ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:24:41 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (2.1ms)</pre>
+
+<p>Completed 200 OK in 894ms (Views: 20.4ms | ActiveRecord: 0.2ms)</p>
+
+<p>Started GET “/wysiwyg?file=_index.md” for 127.0.0.1 at 2018-09-05 23:24:43
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;_index.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts/new” for 127.0.0.1 at 2018-09-05 23:24:53 -0600
+Processing by <a
+href="../PostsController.html#method-i-new">PostsController#new</a> as HTML</p>
+
+<pre>Rendering posts/new.html.erb within layouts/application
+Rendered posts/_form.html.erb (63.2ms)
+Rendered posts/new.html.erb within layouts/application (64.0ms)</pre>
+
+<p>Completed 200 OK in 88ms (Views: 85.0ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:31:22 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (4.2ms)</pre>
+
+<p>Completed 200 OK in 933ms (Views: 26.0ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:31:24
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:34:03
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:34:55
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:35:11
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:36:26
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:36:30 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 979ms (Views: 33.4ms | ActiveRecord: 0.4ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:36:33
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:36:38
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:36:43
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:36:46
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:37:01
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:37:03 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.3ms)</pre>
+
+<p>Completed 200 OK in 3606ms (Views: 27.8ms | ActiveRecord: 0.5ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:37:09
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:37:15
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-09-05 23:37:24 -0600 Processing by
+Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /home/tyler/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /home/tyler/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (4.8ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:37:32 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (5.2ms)</pre>
+
+<p>Completed 200 OK in 1118ms (Views: 34.2ms | ActiveRecord: 0.5ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:37:35
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:37:49
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog2.md” for 127.0.0.1 at 2018-09-05 23:38:29
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog2.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-05 23:41:16 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.7ms)</pre>
+
+<p>Completed 200 OK in 1405ms (Views: 35.5ms | ActiveRecord: 0.3ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:41:21
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:41:24
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:43:17
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 2ms</p>
+
+<p>NameError (uninitialized constant PostsController::FrontMatterParser):</p>
+
+<p>app/controllers/posts_controller.rb:18:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:43:37 -0600</p>
+
+<p>LoadError (cannot load such file – front_matter_parser):</p>
+
+<p>app/controllers/posts_controller.rb:1:in `&lt;top (required)&gt;&#39;
+Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:43:47
+-0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}</pre>
+
+<p>Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)</p>
+
+<p>NameError (undefined local variable or method `file&#39; for
+#&lt;PostsController:0x007febf497b7a0&gt; Did you mean?  @file):</p>
+
+<p>app/controllers/posts_controller.rb:21:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:43:55 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 124ms (Views: 121.8ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:44:12
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 8.7ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:44:58
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.2ms)</pre>
+
+<p>Completed 200 OK in 22ms (Views: 20.9ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:45:09
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.2ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:45:12
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 15ms (Views: 14.4ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:45:36
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 16ms (Views: 15.4ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:45:40
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 29ms (Views: 27.5ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:45:43
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.2ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:49:16 -0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>TypeError (no implicit conversion of nil into String):</p>
+
+<p>app/controllers/posts_controller.rb:19:in `+&#39;
+app/controllers/posts_controller.rb:19:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:49:22 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-05 23:49:27 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>TypeError (no implicit conversion of nil into String):</p>
+
+<p>app/controllers/posts_controller.rb:19:in `+&#39;
+app/controllers/posts_controller.rb:19:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:49:29 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:50:41
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:57:38
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 11.7ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:57:45
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:57:49 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 9.8ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:57:59
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (135.5ms)</pre>
+
+<p>Completed 500 Internal Server Error in 138ms</p>
+
+<p>ActionView::Template::Error (undefined local variable or method
+`write_path&#39; for
+#&lt;#&lt;Class:0x007febe4077f10&gt;:0x007febf89ed298&gt;):</p>
+
+<pre> 7: &lt;/head&gt;
+ 8: &lt;body&gt;
+ 9:   &lt;%= @front_matter %&gt;
+10:   &lt;form action=&quot;&lt;% write_path %&gt;&quot; method=&quot;post&quot;&gt;
+11:   &lt;textarea&gt;&lt;%= @content %&gt;&lt;/textarea&gt;
+12:   &lt;button&gt;Submit&lt;/button&gt;
+13: &lt;/form&gt;</pre>
+
+<p>app/views/posts/wysiwyg.html.erb:10:in
+`_app_views_posts_wysiwyg_html_erb___1241530894171924429_70325732603540&#39;
+Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:58:14
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 20ms (Views: 18.8ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:58:16
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:58:21 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 20ms (Views: 19.2ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:58:40
+-0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (1.1ms)</pre>
+
+<p>Completed 200 OK in 132ms (Views: 127.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:58:42
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:58:48 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-05 23:59:28
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (121.6ms)</pre>
+
+<p>Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)</p>
+
+<p>ActionView::Template::Error (undefined local variable or method
+`write_path&#39; for
+#&lt;#&lt;Class:0x0055a9d3d33268&gt;:0x007f41d98fa800&gt;):</p>
+
+<pre> 7: &lt;/head&gt;
+ 8: &lt;body&gt;
+ 9:   &lt;%= @front_matter %&gt;
+10:   &lt;form action=&quot;&lt;% write_path %&gt;&quot; method=&quot;post&quot;&gt;
+11:   &lt;textarea&gt;&lt;%= @content %&gt;&lt;/textarea&gt;
+12:   &lt;button&gt;Submit&lt;/button&gt;
+13: &lt;/form&gt;</pre>
+
+<p>app/views/posts/wysiwyg.html.erb:10:in
+`_app_views_posts_wysiwyg_html_erb__1152226000090648295_69960401936520&#39;
+Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:14
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:15
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:20 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:33
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 15ms (Views: 13.7ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:35
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:39 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 10.8ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:47
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 11.8ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:00:49
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:01:08 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:01:08
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 10.8ms)</p>
+
+<p>Started GET “/wysiwyg” for 127.0.0.1 at 2018-09-06 00:01:10 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML Completed 500 Internal Server Error in 1ms</p>
+
+<p>TypeError (no implicit conversion of nil into String):</p>
+
+<p>app/controllers/posts_controller.rb:20:in `+&#39;
+app/controllers/posts_controller.rb:20:in `wysiwyg&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:01:17 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.3ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:02:00
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.4ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 9.6ms)</p>
+
+<p>Started POST “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:02:01
+-0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started POST
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:02:14 -0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/wysiwyg”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:02:16 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 10.9ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:02:32
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 8.9ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:02:34 -0600</p>
+
+<p>ActionController::RoutingError (No route matches [POST] “/write”):</p>
+
+<p>actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started POST
+“/write” for 127.0.0.1 at 2018-09-06 00:02:47 -0600 Processing by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML Can&#39;t verify CSRF token authenticity. Completed 422 Unprocessable
+Entity in 1ms</p>
+
+<p>ActionController::InvalidAuthenticityToken
+(ActionController::InvalidAuthenticityToken):</p>
+
+<p>actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:195:in
+`handle_unverified_request&#39; actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:227:in
+`handle_unverified_request&#39; actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:222:in
+`verify_authenticity_token&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:413:in `block in make_lambda&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2
+levels) in halting&#39; actionpack (5.1.6)
+lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in
+&lt;module:Callbacks&gt;&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:198:in `block in halting&#39; activesupport
+(5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in
+`invoke_before&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:130:in `run_callbacks&#39; actionpack
+(5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in
+`process_action&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:32:in `block in
+process_action&#39; activesupport (5.1.6)
+lib/active_support/notifications.rb:166:in `block in instrument&#39;
+activesupport (5.1.6)
+lib/active_support/notifications/instrumenter.rb:21:in `instrument&#39;
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in
+`instrument&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:30:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in
+`process_action&#39; activerecord (5.1.6)
+lib/active_record/railties/controller_runtime.rb:22:in `process_action&#39;
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process&#39;
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in
+`dispatch&#39; actionpack (5.1.6)
+lib/action_dispatch/routing/route_set.rb:31:in `serve&#39; actionpack
+(5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in
+`call&#39; rack (2.0.5) lib/rack/etag.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/conditional_get.rb:38:in `call&#39; rack (2.0.5)
+lib/rack/head.rb:12:in `call&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:232:in `context&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:226:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/cookies.rb:613:in `call&#39; activerecord
+(5.1.6) lib/active_record/migration.rb:556:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:26:in `block in call&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in
+`run_callbacks&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:24:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call&#39;
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:02:53 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.3ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 9.6ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:02:54 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML Can&#39;t verify CSRF token authenticity. Completed 422 Unprocessable
+Entity in 1ms</p>
+
+<p>ActionController::InvalidAuthenticityToken
+(ActionController::InvalidAuthenticityToken):</p>
+
+<p>actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:195:in
+`handle_unverified_request&#39; actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:227:in
+`handle_unverified_request&#39; actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:222:in
+`verify_authenticity_token&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:413:in `block in make_lambda&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2
+levels) in halting&#39; actionpack (5.1.6)
+lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in
+&lt;module:Callbacks&gt;&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:198:in `block in halting&#39; activesupport
+(5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in
+`invoke_before&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:130:in `run_callbacks&#39; actionpack
+(5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in
+`process_action&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:32:in `block in
+process_action&#39; activesupport (5.1.6)
+lib/active_support/notifications.rb:166:in `block in instrument&#39;
+activesupport (5.1.6)
+lib/active_support/notifications/instrumenter.rb:21:in `instrument&#39;
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in
+`instrument&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:30:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in
+`process_action&#39; activerecord (5.1.6)
+lib/active_record/railties/controller_runtime.rb:22:in `process_action&#39;
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process&#39;
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in
+`dispatch&#39; actionpack (5.1.6)
+lib/action_dispatch/routing/route_set.rb:31:in `serve&#39; actionpack
+(5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in
+`call&#39; rack (2.0.5) lib/rack/etag.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/conditional_get.rb:38:in `call&#39; rack (2.0.5)
+lib/rack/head.rb:12:in `call&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:232:in `context&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:226:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/cookies.rb:613:in `call&#39; activerecord
+(5.1.6) lib/active_record/migration.rb:556:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:26:in `block in call&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in
+`run_callbacks&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:24:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call&#39;
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:05:55 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (2.9ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 12.2ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:05:57
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.8ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 11.2ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:06:00 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;HPzl5eEQwuoMbkqZFejq+3zowbuprnZESlA5EKL5/e5vd9rh5NwLZkGzkJYQ9iCg62AZAoqRiPxIdHr+al847g==&quot;, &quot;anything&quot;=&gt;{&quot;name&quot;=&gt;&quot;&quot;}, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>No template found for <a
+href="../PostsController.html#method-i-write">PostsController#write</a>,
+rendering head :no_content Completed 204 No Content in 9ms</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:06:48
+-0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (5.9ms)</pre>
+
+<p>Completed 200 OK in 101ms (Views: 96.4ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:06:51 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;fY82KwNLw87GEMErWXneRwuh07tZpJIAKLXhD2VODdoOBAkvBocKQovNGyRcZxQcnCkLAnqbbLgqkaLhrejI2g==&quot;, &quot;anything&quot;=&gt;{&quot;name&quot;=&gt;&quot;&quot;}, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>No template found for <a
+href="../PostsController.html#method-i-write">PostsController#write</a>,
+rendering head :no_content Completed 204 No Content in 8ms (ActiveRecord:
+0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:07:21
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.9ms)</pre>
+
+<p>Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:07:44 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;9Dy1Gj/UGaCSVU5A6J2RfaXcDAzFSl4q65LYmAzSrtCHt4oeOhjQLN+IlE/tg1smMlTUteZ1oJLptpt2xHRr0A==&quot;, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>Unpermitted parameters: :utf8, :authenticity_token, :commit Completed 500
+Internal Server Error in 1ms</p>
+
+<p>TypeError (no implicit conversion of nil into String):</p>
+
+<p>app/controllers/posts_controller.rb:20:in `+&#39;
+app/controllers/posts_controller.rb:20:in `wysiwyg&#39;
+app/controllers/posts_controller.rb:27:in `write&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:08:32 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.9ms)</pre>
+
+<p>Completed 200 OK in 19ms (Views: 17.9ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:08:34 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;ZSpIVfq5/Z8+wFELhq/UTuTfZt6PLEnmTKDkPfxDhIAWoXdR/3U0E3MdiwSDsR4Vc1e+Z6wTt15OhKfTNOVBgA==&quot;, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; LIMIT ?[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>Redirected to</p>
+
+<pre>[1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; LIMIT ?[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>Completed 500 Internal Server Error in 1361ms (ActiveRecord: 0.4ms)</p>
+
+<pre>[1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  &quot;posts&quot;.* FROM &quot;posts&quot; LIMIT ?[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>NoMethodError (undefined method `._..__index.md_blog1.md_blog2.md_url&#39;
+for #&lt;PostsController:0x007fe9720fb168&gt;):</p>
+
+<p>app/controllers/posts_controller.rb:27:in `write&#39; Started GET “/posts”
+for 127.0.0.1 at 2018-09-06 00:09:07 -0600 Processing by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.4ms)</pre>
+
+<p>Completed 200 OK in 2141ms (Views: 11.1ms | ActiveRecord: 0.1ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:09:38
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 9.8ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:09:39 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;DsW01VTaALqzju+TFVOeoYBNmQlrAVJEwUKxitbCZ83ukqNGJZ/fbZs7eK7XyFrYA/1NWcxZ6flmNjB+8DAm7w==&quot;, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>Can&#39;t verify CSRF token authenticity. Completed 422 Unprocessable
+Entity in 1ms</p>
+
+<p>ActionController::InvalidAuthenticityToken
+(ActionController::InvalidAuthenticityToken):</p>
+
+<p>actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:195:in
+`handle_unverified_request&#39; actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:227:in
+`handle_unverified_request&#39; actionpack (5.1.6)
+lib/action_controller/metal/request_forgery_protection.rb:222:in
+`verify_authenticity_token&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:413:in `block in make_lambda&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2
+levels) in halting&#39; actionpack (5.1.6)
+lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in
+&lt;module:Callbacks&gt;&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:198:in `block in halting&#39; activesupport
+(5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in
+`invoke_before&#39; activesupport (5.1.6)
+lib/active_support/callbacks.rb:130:in `run_callbacks&#39; actionpack
+(5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in
+`process_action&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:32:in `block in
+process_action&#39; activesupport (5.1.6)
+lib/active_support/notifications.rb:166:in `block in instrument&#39;
+activesupport (5.1.6)
+lib/active_support/notifications/instrumenter.rb:21:in `instrument&#39;
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in
+`instrument&#39; actionpack (5.1.6)
+lib/action_controller/metal/instrumentation.rb:30:in `process_action&#39;
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in
+`process_action&#39; activerecord (5.1.6)
+lib/active_record/railties/controller_runtime.rb:22:in `process_action&#39;
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process&#39;
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch&#39;
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in
+`dispatch&#39; actionpack (5.1.6)
+lib/action_dispatch/routing/route_set.rb:31:in `serve&#39; actionpack
+(5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each&#39;
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve&#39;
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in
+`call&#39; rack (2.0.5) lib/rack/etag.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/conditional_get.rb:38:in `call&#39; rack (2.0.5)
+lib/rack/head.rb:12:in `call&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:232:in `context&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:226:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/cookies.rb:613:in `call&#39; activerecord
+(5.1.6) lib/active_record/migration.rb:556:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:26:in `block in call&#39;
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in
+`run_callbacks&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/callbacks.rb:24:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call&#39;
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in
+`call&#39; web-console (3.7.0) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.7.0) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.7.0) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.1.6) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.1.6)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.1.6)
+lib/rails/rack/logger.rb:24:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/remote_ip.rb:79:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.1.6)
+lib/active_support/cache/strategy/local_cache_middleware.rb:27:in
+`call&#39; actionpack (5.1.6)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.1.6)
+lib/rails/engine.rb:522:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:09:42 -0600
+Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.4ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 00:09:43
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 11.1ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 00:09:45 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;eRBedK/xqSMKDkDtaI2I1hCn9xhl/5Oht3hzpRqdHqgKm2Fwqj1gr0fTmuJtk0KNhy8voUbAbRm1XDBL0jvbqA==&quot;, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>Redirected to <a
+href="http://localhost:3000/posts">localhost:3000/posts</a> Completed 302
+Found in 1ms</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-06 00:09:45 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (11.5ms)</pre>
+
+<p>Completed 200 OK in 1297ms (Views: 27.1ms | ActiveRecord: 0.7ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-09-06 11:29:19 -0600</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m</pre>
+
+<p>Processing by Rails::WelcomeController#index as HTML</p>
+
+<pre>Rendering /home/tyler/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+Rendered /home/tyler/.rvm/gems/ruby-2.4.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-06 11:29:23 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (7.5ms)</pre>
+
+<p>Completed 200 OK in 2147ms (Views: 489.9ms | ActiveRecord: 1.8ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:29:37
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (91.5ms)</pre>
+
+<p>Completed 200 OK in 164ms (Views: 125.4ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:31:58
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:32:25
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.9ms)</pre>
+
+<p>Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:32:46
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (2.7ms)</pre>
+
+<p>Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:33:15
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (1.5ms)</pre>
+
+<p>Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:33:54
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (2.2ms)</pre>
+
+<p>Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:34:07
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.7ms)</pre>
+
+<p>Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:34:13
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.8ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:34:41
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (1.0ms)</pre>
+
+<p>Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 11:35:43 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;1NizR+h7ShUrNPTva86eNv4BrDUlXZ3PziXsO0ibYZGDAN0edmPgTD7nYtNvNRTqwYLUIMrsfbolpnRnU5LuAg==&quot;, &quot;title&quot;=&gt;&quot;Hello World&quot;, &quot;category&quot;=&gt;&quot;Greetings&quot;, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>Redirected to <a
+href="http://localhost:3000/posts">localhost:3000/posts</a> Completed 302
+Found in 2ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-06 11:35:43 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (1.5ms)</pre>
+
+<p>Completed 200 OK in 859ms (Views: 18.4ms | ActiveRecord: 0.1ms)</p>
+
+<p>Started GET “/wysiwyg?file=blog1.md” for 127.0.0.1 at 2018-09-06 11:35:46
+-0600 Processing by <a
+href="../PostsController.html#method-i-wysiwyg">PostsController#wysiwyg</a>
+as HTML</p>
+
+<pre>Parameters: {&quot;file&quot;=&gt;&quot;blog1.md&quot;}
+Rendering posts/wysiwyg.html.erb within layouts/application
+Rendered posts/wysiwyg.html.erb within layouts/application (0.8ms)</pre>
+
+<p>Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/write” for 127.0.0.1 at 2018-09-06 11:36:13 -0600 Processing
+by <a
+href="../PostsController.html#method-i-write">PostsController#write</a> as
+HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;b69/5bX99kf3FOZvZA7AgQls5Y7HBLnHU4lvGRdYBG84dxG8K+VcHuLHcFNg9UpdNu+dmyi1WbK4CvdFDFGL/A==&quot;, &quot;title&quot;=&gt;&quot;Hello World&quot;, &quot;category&quot;=&gt;&quot;Greetings&quot;, &quot;commit&quot;=&gt;&quot;Save Anything&quot;}</pre>
+
+<p>Redirected to <a
+href="http://localhost:3000/posts">localhost:3000/posts</a> Completed 302
+Found in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/posts” for 127.0.0.1 at 2018-09-06 11:36:13 -0600 Processing
+by <a
+href="../PostsController.html#method-i-index">PostsController#index</a> as
+HTML</p>
+
+<pre>Rendering posts/index.html.erb within layouts/application
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+Rendered posts/index.html.erb within layouts/application (3.4ms)</pre>
+
+<p>Completed 200 OK in 877ms (Views: 30.1ms | ActiveRecord: 0.3ms)</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
