@@ -15,8 +15,9 @@
   <%= @file %>
   <%= text_field_tag 'file', @file %>
   <%= text_area_tag 'Content', @content %>
-  <%= form.submit  %>
+  <%= form.submit 'Save'  %>
 <% end  %>
 </form>
+<%= link_to 'Back', posts_path %>
 </body>
 </html>

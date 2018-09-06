@@ -1,5 +1,16 @@
-<h1>New Post</h1>
 
-<%= render 'form', post: @post %>
-
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+  <%= form_for :anything, url: "write" do |form| %>
+  <%= text_area_tag 'Content' %>
+  <%= form.submit 'Save'  %>
+<% end  %>
+</form>
 <%= link_to 'Back', posts_path %>
+</body>
+</html>
