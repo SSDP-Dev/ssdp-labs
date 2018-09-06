@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h1>Posts</h1>
-<%= link_to 'New Post', posts_new_path %>
+<%= link_to 'New Post', pages_new_path %>
 <br>
 <table>
   <thead>
@@ -13,8 +13,8 @@
       <%  unless f == "." || f == ".." ||  f == "blog" %>
         <tr>
           <td><%= f %></td>
-          <td><%= link_to 'Edit', posts_edit_path(:file => f) %></td>
-          <td><%= link_to 'Destroy', posts_destroy_path(:file => f), data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', pages_edit_path(:file => f) %></td>
+          <td><%= link_to 'Destroy', pages_destroy_path(:file => f), data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     <% end %>
