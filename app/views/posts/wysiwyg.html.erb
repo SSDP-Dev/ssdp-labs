@@ -1,1 +1,14 @@
-<%= @file %>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+  <form>
+  <textarea><%= @file %></textarea>
+  <button>Submit</button>
+</form>
+</body>
+</html>

@@ -34,11 +34,13 @@
 
   <tbody>
 <% @files.each do |f| %>
+<%  unless f == "." || f == ".." %>
 
 <tr>
   <td><%= f %></td>
   <td><%= link_to 'Show', wysiwyg_path(:file => f) %></td>
 </tr>
+<% end %>
 <% end %>
 </tbody>
 </table>
