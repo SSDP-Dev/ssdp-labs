@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   post '/posts/write',       to: 'posts#write'
   get  '/posts/destroy',     to: 'posts#destroy'
   get  'pages',              to: 'pages#index'
+  get  '/pages/new',         to: 'pages#new'
+  get  '/pages/edit',        to: 'pages#edit'
+  post '/pages/write',       to: 'pages#write'
+  get  '/pages/destroy',     to: 'pages#destroy'
 end
