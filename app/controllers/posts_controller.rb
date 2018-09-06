@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def wysiwyg
-    @file = post_params[:file]
+    @file = File.read('./lib/assets/managed_site/' + post_params[:file])
   end
 
   # GET /posts/1
