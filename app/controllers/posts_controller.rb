@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @files = Dir.entries('./lib/assets/managed_site')
   end
 
   # GET /posts/1
