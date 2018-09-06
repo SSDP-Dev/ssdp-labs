@@ -8,12 +8,12 @@
 <body>
   <%= form_for :anything, url: "write" do |form| %>
   Title
-  <%= text_field_tag 'Title' %>
+  <%= text_field_tag 'title' %>
   Category
-  <%= text_field_tag 'Category' %>
+  <%= text_field_tag 'category' %>
   File Name
-  <%= text_field_tag 'File' %>
-  <%= text_area_tag 'Content' %>
+  <%= text_field_tag 'file' %>
+  <%= text_area_tag 'content' %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>

@@ -20,7 +20,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
   end
 
   def edit
@@ -30,25 +29,11 @@ class PostsController < ApplicationController
     @content = @parsed_file.content #=> 'Some actual content'
   end
 
-  def create
-    @post = Post.new(post_params)
-
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
+  def write
     @file = post_params[:file]
     @title = post_params[:title]
     @category = post_params[:category]
-    @content = post_params[:Content]
+    @content = post_params[:content]
     open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
       f << "---\n"
       f << "title: " + @title + "\n"
@@ -88,6 +73,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.permit(:file, :Content, :title, :category)
+    params.permit(:file, :content, :title, :category)
   end
 end
