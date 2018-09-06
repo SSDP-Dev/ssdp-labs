@@ -34,19 +34,20 @@ class PostsController < ApplicationController
     @title = post_params[:title]
     @category = post_params[:category]
     @content = post_params[:content]
-    open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
-      f << "---\n"
-      f << "title: " + @title + "\n"
-      f << "category: " + @category + "\n"
-      f << "---\n"
-      f << @content
-    }
+
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
       # Add files
+      open('./content/blog/' + post_params[:file], 'w'){|f|
+        f << "---\n"
+        f << "title: " + @title + "\n"
+        f << "category: " + @category + "\n"
+        f << "---\n"
+        f << @content
+      }
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS"')
       system('git push');

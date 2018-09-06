@@ -24,7 +24,7 @@ class PagesController < ApplicationController
 
   def edit
     @file = post_params[:file]
-    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
+    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/' + post_params[:file])
     @front_matter = @parsed_file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
     @content = @parsed_file.content #=> 'Some actual content'
   end
@@ -34,19 +34,15 @@ class PagesController < ApplicationController
     @title = post_params[:title]
     @category = post_params[:category]
     @content = post_params[:content]
-    open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
-      f << "---\n"
-      f << "title: " + @title + "\n"
-      f << "category: " + @category + "\n"
-      f << "---\n"
-      f << @content
-    }
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
       # Add files
+      open('./content/' + post_params[:file], 'w'){|f|
+        f << @content
+      }
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS"')
       system('git push');
@@ -59,7 +55,7 @@ class PagesController < ApplicationController
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
-      system('rm ./content/blog/' + post_params[:file])
+      system('rm ./content/' + post_params[:file])
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS"')
       system('git push');
