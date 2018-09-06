@@ -8,6 +8,10 @@
 <body>
   <%= @front_matter %>
   <%= form_for :anything, url: "write" do |form| %>
+  <% @front_matter.each do |key, value| %>
+  <%= key %>
+  <%= text_field_tag key, value %>
+  <% end %>
   <textarea><%= @content %></textarea>
 
   <%= form.submit  %>
