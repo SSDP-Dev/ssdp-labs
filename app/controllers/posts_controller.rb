@@ -14,6 +14,10 @@ class PostsController < ApplicationController
     @files = Dir.entries('./lib/assets/managed_site')
   end
 
+  def wysiwyg
+    @file = post_params[:file]
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -76,6 +80,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.fetch(:post, {})
+      params.permit(:file)
     end
 end
