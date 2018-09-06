@@ -28,6 +28,13 @@ class PostsController < ApplicationController
     @title = post_params[:title]
     @category = post_params[:category]
     @content = post_params[:Content]
+    open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
+    f << "---\n"
+    f << "title: " + @title + "\n"
+    f << "category: " + @category + "\n"
+    f << "---\n"
+    f << @content
+    }
   end
 
   # GET /posts/1
