@@ -6,59 +6,30 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
     # Change directory to the managed site
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       system('git fetch --all')
       system('git reset --hard origin/master');
     end
+    # We're just interested in the files that exist within the blog directory for the Post controller
     @files = Dir.entries('./lib/assets/managed_site/content/blog')
   end
 
-  def wysiwyg
+  def show
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def edit
     @file = post_params[:file]
     @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
     @front_matter = @parsed_file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
     @content = @parsed_file.content #=> 'Some actual content'
   end
 
-  def write
-    @file = post_params[:file]
-    @title = post_params[:title]
-    @category = post_params[:category]
-    @content = post_params[:Content]
-    open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
-    f << "---\n"
-    f << "title: " + @title + "\n"
-    f << "category: " + @category + "\n"
-    f << "---\n"
-    f << @content
-    }
-    Dir.chdir('./lib/assets/managed_site') do
-      # Pull the repo using fetch/reset
-      system('git add -A')
-      system('git commit -m "Placeholder commit for now - this will have to be something else in production"')
-      system('git push');
-    end
-  end
-
-  # GET /posts/1
-  # GET /posts/1.json
-  def show
-  end
-
-  # GET /posts/new
-  def new
-    @post = Post.new
-  end
-
-  # GET /posts/1/edit
-  def edit
-  end
-
-  # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(post_params)
 
@@ -73,34 +44,46 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
-      else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
+    @file = post_params[:file]
+    @title = post_params[:title]
+    @category = post_params[:category]
+    @content = post_params[:Content]
+    open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
+    f << "---\n"
+    f << "title: " + @title + "\n"
+    f << "category: " + @category + "\n"
+    f << "---\n"
+    f << @content
+    }
+    Dir.chdir('./lib/assets/managed_site') do
+      # Pull the repo using fetch/reset
+      # Make sure we're up to date
+      system('git fetch --all')
+      system('git reset --hard origin/master')
+      # Add files
+      system('git add -A')
+      system('git commit -m "Commit from SSDP LABS"')
+      system('git push');
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      Dir.chdir('./lib/assets/managed_site') do
+    # Pull the repo using fetch/reset
+    # Make sure we're up to date
+    system('git fetch --all')
+    system('git reset --hard origin/master')
+    system('rm ./content/blog/' + post_params[:file])
+    system('git add -A')
+    system('git commit -m "Commit from SSDP LABS"')
+    system('git push');
+  end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
