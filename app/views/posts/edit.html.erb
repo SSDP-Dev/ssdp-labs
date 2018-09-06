@@ -12,8 +12,8 @@
   <%= key %>
   <%= text_field_tag key, value %>
   <% end %>
-  <%= @file %>
-  <%= text_field_tag 'file', @file %>
+  File Name
+  <%= text_field_tag 'File', @file %>
   <%= text_area_tag 'Content', @content %>
   <%= form.submit 'Save'  %>
 <% end  %>

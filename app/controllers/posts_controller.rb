@@ -50,11 +50,11 @@ class PostsController < ApplicationController
     @category = post_params[:category]
     @content = post_params[:Content]
     open('./lib/assets/managed_site/content/blog/' + post_params[:file], 'w'){|f|
-    f << "---\n"
-    f << "title: " + @title + "\n"
-    f << "category: " + @category + "\n"
-    f << "---\n"
-    f << @content
+      f << "---\n"
+      f << "title: " + @title + "\n"
+      f << "category: " + @category + "\n"
+      f << "---\n"
+      f << @content
     }
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
@@ -69,25 +69,25 @@ class PostsController < ApplicationController
   end
 
   def destroy
-      Dir.chdir('./lib/assets/managed_site') do
-    # Pull the repo using fetch/reset
-    # Make sure we're up to date
-    system('git fetch --all')
-    system('git reset --hard origin/master')
-    system('rm ./content/blog/' + post_params[:file])
-    system('git add -A')
-    system('git commit -m "Commit from SSDP LABS"')
-    system('git push');
-  end
+    Dir.chdir('./lib/assets/managed_site') do
+      # Pull the repo using fetch/reset
+      # Make sure we're up to date
+      system('git fetch --all')
+      system('git reset --hard origin/master')
+      system('rm ./content/blog/' + post_params[:file])
+      system('git add -A')
+      system('git commit -m "Commit from SSDP LABS"')
+      system('git push');
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.permit(:file, :Content, :title, :category)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def post_params
+    params.permit(:file, :Content, :title, :category)
+  end
 end

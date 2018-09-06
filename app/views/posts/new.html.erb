@@ -7,6 +7,12 @@
 </head>
 <body>
   <%= form_for :anything, url: "write" do |form| %>
+  Title
+  <%= text_field_tag 'Title' %>
+  Category
+  <%= text_field_tag 'Category' %>
+  File Name
+  <%= text_field_tag 'File' %>
   <%= text_area_tag 'Content' %>
   <%= form.submit 'Save'  %>
 <% end  %>
