@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+</head>
+<body>
+  <%= form_for :posts, authenticity_token: true, url: "write" do |form| %>
+  File Name
+  <%= text_field_tag 'file', @file %>
+  <%= text_area_tag 'content', @content %>
+  <%= form.submit 'Save'  %>
+<% end  %>
+</form>
+<%= link_to 'Back', pages_path %>
+</body>
+</html>
