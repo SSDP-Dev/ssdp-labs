@@ -8,8 +8,7 @@ task :pull_wp_posts do
     http.request(req)
   }
   response_body_json = JSON.parse(res.body)[0]
-  puts response_body_json["id"]
-  puts response_body_json["date"]
-  puts response_body_json["date_gmt"]
-
+  response_body_json.each do |key, value|
+    puts key.to_s + " " + value.to_s
+  end
 end
