@@ -8,7 +8,11 @@ task :pull_wp_posts do
     http.request(req)
   }
   response_body_json = JSON.parse(res.body)[0]
+  slug = response_body_json["slug"]
+  post_path = './lib/assets/managed_site/content/blog/' + slug + '.md'
   response_body_json.each do |key, value|
-    puts key.to_s + " " + value.to_s
+    open(post_path, 'a') { |f|
+      f.puts key.to_s + ": " + value.to_s
+    }
   end
 end
