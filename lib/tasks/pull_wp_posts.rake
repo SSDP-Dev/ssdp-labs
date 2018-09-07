@@ -7,7 +7,7 @@ task :pull_wp_posts do
   res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
     http.request(req)
   }
-  wp_total = res["X-WP-Total"]
+  wp_total = res["X-WP-Total"].to_i
   wp_total.times do |i|
     i+= 1
     write_blog_post(i.to_s)
