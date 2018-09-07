@@ -11,29 +11,32 @@ task :pull_wp_posts do
   slug = response_body_json["slug"]
   post_path = './lib/assets/managed_site/content/blog/' + slug + '.md'
   open(post_path, 'a') { |f|
-    f.puts "---"
+    f.puts "+++"
   }
   response_body_json.each do |key, value|
     case key
     when "guid"
       open(post_path, 'a') { |f|
-        f.puts key.to_s + ": " + value["rendered"].to_s
+        f.puts key.to_s + ' = """' + value["rendered"].to_s + '"""'
       }
     when "title"
       open(post_path, 'a') { |f|
-        f.puts key.to_s + ": " + value["rendered"].to_s
+        f.puts key.to_s + ' = """' + value["rendered"].to_s + '"""'
       }
     when "content"
     when "excerpt"
+      open(post_path, 'a') { |f|
+        f.puts key.to_s + ' = """' + value["rendered"].to_s + '"""'
+      }
     when "_links"
     else
       open(post_path, 'a') { |f|
-        f.puts key.to_s + ": " + value.to_s
+        f.puts key.to_s + ' = """' + value.to_s + '"""'
       }
     end
   end
   open(post_path, 'a') { |f|
-    f.puts "---"
+    f.puts "+++"
   }
   open(post_path, 'a') { |f|
     f.puts response_body_json["content"]["rendered"]
