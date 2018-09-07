@@ -44,7 +44,7 @@ class PagesController < ApplicationController
         f << @content
       }
       system('git add -A')
-      system('git commit -m "Commit from SSDP LABS"')
+      system('git commit -m "Commit from SSDP LABS - writing a page"')
       system('git push');
     end
   end
@@ -57,7 +57,7 @@ class PagesController < ApplicationController
       system('git reset --hard origin/master')
       system('rm ./content/' + post_params[:file])
       system('git add -A')
-      system('git commit -m "Commit from SSDP LABS"')
+      system('git commit -m "Commit from SSDP LABS - destroy a page"')
       system('git push');
     end
   end

@@ -49,7 +49,7 @@ class PostsController < ApplicationController
         f << @content
       }
       system('git add -A')
-      system('git commit -m "Commit from SSDP LABS"')
+      system('git commit -m "Commit from SSDP LABS - writing a post"')
       system('git push');
     end
   end
@@ -62,7 +62,7 @@ class PostsController < ApplicationController
       system('git reset --hard origin/master')
       system('rm ./content/blog/' + post_params[:file])
       system('git add -A')
-      system('git commit -m "Commit from SSDP LABS"')
+      system('git commit -m "Commit from SSDP LABS - destroying a post"')
       system('git push');
     end
   end

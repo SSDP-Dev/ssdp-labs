@@ -2,6 +2,11 @@ require 'net/http'
 require 'json'
 desc "Pull all of the WordPress posts from a target site into the managed repo"
 task :pull_wp_posts do
+  Dir.chdir('./lib/assets/managed_site') do
+    # Pull the repo using fetch/reset
+    system('git fetch --all')
+    system('git reset --hard origin/master');
+  end
   uri = URI("https://ssdp.org/wp-json/wp/v2/posts")
   req = Net::HTTP::Get.new(uri)
   res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
@@ -12,6 +17,11 @@ task :pull_wp_posts do
     i+= 1
     write_blog_post(i.to_s)
     puts "Finished " + i.to_s + " out of " + wp_total.to_s
+  end
+  Dir.chdir('./lib/assets/managed_site') do
+    system('git add -A')
+    system('git commit -m "Commit from SSDP LABS - pulling down the WP posts"')
+    system('git push');
   end
 end
 
