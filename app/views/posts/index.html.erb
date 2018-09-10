@@ -2,7 +2,7 @@
 <h1>Posts</h1>
 <%= link_to 'New Post', posts_new_path %>
 <br>
-
+<%= will_paginate @files %>
 <table>
   <thead>
     <tr>
@@ -21,3 +21,4 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate @files %>

@@ -1,5 +1,6 @@
 require 'front_matter_parser'
 require 'yaml'
+require 'will_paginate/array'
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -13,7 +14,7 @@ class PostsController < ApplicationController
       system('git reset --hard origin/master');
     end
     # We're just interested in the files that exist within the blog directory for the Post controller
-    @files = Dir.entries('./lib/assets/managed_site/content/blog')
+    @files = Dir.entries('./lib/assets/managed_site/content/blog').paginate(page: params[:page])
   end
 
   def show
