@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   end
 
   def write
-    @file = post_params[:file]
+    @file = post_params[:slug]
     @title = post_params[:title]
     @category = post_params[:category]
     @content = post_params[:posts][:content]
@@ -43,11 +43,10 @@ class PostsController < ApplicationController
       system('git fetch --all')
       system('git reset --hard origin/master')
       # Add files
-      open('./content/blog/' + post_params[:file], 'w'){|f|
-        f << "---\n"
-        f << "title: " + @title + "\n"
-        f << "category: " + @category + "\n"
-        f << "---\n"
+      open('./content/blog/' + post_params[:slug] + '.md', 'w'){|f|
+        f.puts "+++"
+        f.puts ""
+        f.puts "+++"
         f << @content
       }
       system('git add -A')
@@ -76,6 +75,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.permit(:file, :content, :title, :category, posts: [:content])
+    params.permit(:file, :content, :title, :category, :slug, posts: [:content, :slug])
   end
 end
