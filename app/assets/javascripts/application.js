@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require ckeditor/init
 //= require_tree .
 //= require jquery3
 //= require popper

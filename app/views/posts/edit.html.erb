@@ -1,23 +1,14 @@
-
 <!DOCTYPE html>
 <html>
-<head>
- <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
-</head>
-<body>
-  <%= @front_matter %>
-  <%= form_for :anything, url: "write" do |form| %>
-  <% @front_matter.each do |key, value| %>
-  <%= key %>
-  <%= text_field_tag key, value %>
+  <head>
+    <%= javascript_include_tag Ckeditor.cdn_url %>
+  </head>
+  <body>
+
+    <%= form_for :anything do |form| %>
+    <%= form.cktext_area :content, value: @content, id: 'sometext' %>
   <% end %>
-  File Name
-  <%= text_field_tag 'file', @file %>
-  <%= text_area_tag 'content', @content %>
-  <%= form.submit 'Save'  %>
-<% end  %>
-</form>
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Back', posts_path %>
+
 </body>
 </html>
