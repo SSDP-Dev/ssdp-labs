@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get  '/pages/edit',        to: 'pages#edit'
   post '/pages/write',       to: 'pages#write'
   get  '/pages/destroy',     to: 'pages#destroy'
+  root to: 'static_pages#index'
 end
