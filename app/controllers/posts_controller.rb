@@ -1,6 +1,7 @@
 require 'front_matter_parser'
 require 'yaml'
 require 'will_paginate/array'
+require 'toml-rb'
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -27,6 +28,8 @@ class PostsController < ApplicationController
     @file = post_params[:file]
     @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
     @front_matter = @parsed_file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
+    lines = File.read('./lib/assets/managed_site/content/blog/' + post_params[:file])
+    TomlRB.parse(lines.split("+++")[1])
     @content = @parsed_file.content #=> 'Some actual content'
   end
 
