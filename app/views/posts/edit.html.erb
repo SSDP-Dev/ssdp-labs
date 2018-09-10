@@ -1,14 +1,24 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= javascript_include_tag Ckeditor.cdn_url %>
-  </head>
-  <body>
+<head>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
 
-    <%= form_for :anything do |form| %>
-    <%= form.cktext_area :content, value: @content, id: 'sometext' %>
+</head>
+<body>
+  <%= @front_matter %>
+  <%= form_for :anything, url: "write" do |form| %>
+  <% @front_matter.each do |key, value| %>
+  <%= key %>
+  <%= text_field_tag key, value %>
   <% end %>
-  <%= link_to 'Back', posts_path %>
+  File Name
+  <%= text_field_tag 'file', @file %>
+  <%= form.cktext_area :content, value: @content, id: 'sometext' %>
 
+  <%= form.submit 'Save'  %>
+<% end  %>
+</form>
+<%= link_to 'Back', posts_path %>
 </body>
 </html>
