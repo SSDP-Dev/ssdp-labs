@@ -58,5 +58,5 @@ gem 'front_matter_parser'
 gem 'bootstrap', '~> 4.1.3'
 
 gem 'will_paginate',           '3.1.6'
-gem 'bootstrap-will_paginate', '1.0.0'
+gem 'will_paginate-bootstrap4'
 gem 'jquery-rails'
