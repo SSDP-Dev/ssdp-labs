@@ -25,9 +25,8 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @file = post_params[:file]
-    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/blog/' + post_params[:file])
     lines = File.read('./lib/assets/managed_site/content/blog/' + post_params[:file])
+    @file = post_params[:file]
     @front_matter = TomlRB.parse(lines.split("+++")[1])
     @content = lines.split("+++")[2]
   end

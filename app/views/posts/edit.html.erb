@@ -7,14 +7,17 @@
 </head>
 <body>
   <%= form_for :anything, url: "write" do |form| %>
-  <% @front_matter.each do |key, value| %>
-  <%= key %>
-  <%= text_field_tag key, value, class: "form-control" %>
-  <% end %>
-  File Name
-  <%= text_field_tag 'file', @file %>
-  <%= form.cktext_area 'content', value: @content %>
 
+  Title
+  <%= text_field_tag 'title', @front_matter["title"], class: "form-control" %>
+
+  <%= form.cktext_area 'content', value: @content %>
+  Slug
+  <%= text_field_tag 'slug', @front_matter["slug"], class: "form-control" %>
+  Status
+  <%= text_field_tag 'status', @front_matter["status"], class: "form-control" %>
+  Excerpt
+  <%= text_area_tag 'excerpt', @front_matter["excerpt"], class: "form-control" %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>
