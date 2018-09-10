@@ -14,7 +14,7 @@
   <% end %>
   File Name
   <%= text_field_tag 'file', @file %>
-  <%= form.cktext_area :content, value: @content, id: 'sometext' %>
+  <%= form.cktext_area 'content', value: @content %>
 
   <%= form.submit 'Save'  %>
 <% end  %>

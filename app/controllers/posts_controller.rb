@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     @file = post_params[:file]
     @title = post_params[:title]
     @category = post_params[:category]
-    @content = post_params[:content]
+    @content = post_params[:posts][:content]
 
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
@@ -75,6 +75,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.permit(:file, :content, :title, :category)
+    params.permit(:file, :content, :title, :category, posts: [:content])
   end
 end
