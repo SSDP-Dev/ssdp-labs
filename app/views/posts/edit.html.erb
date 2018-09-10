@@ -6,7 +6,6 @@
 
 </head>
 <body>
-  <%= @front_matter %>
   <%= form_for :anything, url: "write" do |form| %>
   <% @front_matter.each do |key, value| %>
   <%= key %>
