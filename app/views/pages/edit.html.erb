@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
- <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+
 </head>
 <body>
   <%= form_for :posts, authenticity_token: true, url: "write" do |form| %>
@@ -13,7 +13,7 @@
   <% end %>
   File Name
   <%= text_field_tag 'file', @file %>
-  <%= text_area_tag 'content', @content %>
+  <%= form.cktext_area :content, value: @content, id: 'sometext' %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>
