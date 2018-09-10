@@ -9,7 +9,7 @@
   <%= form_for :anything, url: "write" do |form| %>
   <% @front_matter.each do |key, value| %>
   <%= key %>
-  <%= text_field_tag key, value %>
+  <%= text_field_tag key, value, class: "form-control" %>
   <% end %>
   File Name
   <%= text_field_tag 'file', @file %>
