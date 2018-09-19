@@ -32,9 +32,7 @@ class PostsController < ApplicationController
   end
 
   def write
-    @file = post_params[:slug]
     @title = post_params[:title]
-    @category = post_params[:category]
     @content = post_params[:posts][:content]
 
     Dir.chdir('./lib/assets/managed_site') do
