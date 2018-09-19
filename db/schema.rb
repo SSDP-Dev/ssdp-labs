@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180919213623) do
+ActiveRecord::Schema.define(version: 20180919223851) do
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180919213623) do
     t.string "modified_gmt"
     t.string "slug"
     t.string "status"
-    t.string "type"
+    t.string "post_type"
     t.string "password"
     t.string "title"
     t.text "content"

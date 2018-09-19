@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 desc "Pull all of the WordPress posts from a target site into the managed repo"
-task :pull_wp_posts do
+task :pull_wp_posts => :environment do
   Dir.chdir('./lib/assets/managed_site') do
     # Pull the repo using fetch/reset
     system('git fetch --all')
@@ -16,6 +16,7 @@ task :pull_wp_posts do
   wp_total.times do |i|
     i+= 1
     write_blog_post(i.to_s)
+    Post.create(post_params(i.to_s))
     puts "Finished " + i.to_s + " out of " + wp_total.to_s
   end
   Dir.chdir('./lib/assets/managed_site') do
@@ -26,12 +27,7 @@ task :pull_wp_posts do
 end
 
 def write_blog_post(page)
-  uri = URI("https://ssdp.org/wp-json/wp/v2/posts?per_page=1&page=" + page)
-  req = Net::HTTP::Get.new(uri)
-  res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
-    http.request(req)
-  }
-  response_body_json = JSON.parse(res.body)[0]
+  response_body_json = get_wp_data(page)
   slug = response_body_json["slug"]
   type = response_body_json["type"]
   if type == "post"
@@ -70,4 +66,21 @@ def write_blog_post(page)
       f.puts response_body_json["content"]["rendered"]
     }
   end
+end
+
+def post_params(page)
+  response_body_json = get_wp_data(page)
+  # Since we haven't massaged the data from the response body
+  # Return nil for now
+  # TODO: set the parameters correctly
+  return nil
+end
+
+def get_wp_data(page)
+  uri = URI("https://ssdp.org/wp-json/wp/v2/posts?per_page=1&page=" + page)
+  req = Net::HTTP::Get.new(uri)
+  res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
+    http.request(req)
+  }
+  return response_body_json = JSON.parse(res.body)[0]
 end
