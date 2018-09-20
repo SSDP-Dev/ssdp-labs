@@ -8,14 +8,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    # Change directory to the managed site
-    Dir.chdir('./lib/assets/managed_site') do
-      # Pull the repo using fetch/reset
-      system('git fetch --all')
-      system('git reset --hard origin/master');
-    end
-    # We're just interested in the files that exist within the blog directory for the Post controller
-    @files = Dir.entries('./lib/assets/managed_site/content/blog').paginate(page: params[:page])
+    @files = Post.paginate(:page => params[:page])
   end
 
   def show

@@ -13,7 +13,7 @@
     <% @files.each do |f| %>
       <%  unless f == "." || f == ".." %>
         <tr>
-          <td><%= f %></td>
+          <td><%= f.title %></td>
           <td><%= link_to 'Edit', posts_edit_path(:file => f) %></td>
           <td><%= link_to 'Destroy', posts_destroy_path(:file => f), data: { confirm: 'Are you sure?' } %></td>
         </tr>
