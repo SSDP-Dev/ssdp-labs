@@ -90,6 +90,8 @@ def post_params(page)
         params_hash[:author] = value.to_i
       when "featured_media"
         params_hash[:featured_media] = value.to_i
+      when "content"
+        params_hash[:content] = value["rendered"].to_s
       when "comment_status"
       when "ping_status"
       when "template"
