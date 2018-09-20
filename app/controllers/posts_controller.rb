@@ -47,6 +47,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(post_params[:id])
+    @post.destroy
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       # Make sure we're up to date
@@ -66,6 +68,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.permit(:file, :content, :title, :category, :slug, posts: [:content, :slug])
+    params.permit(:id, :file, :content, :title, :category, :slug, posts: [:content, :slug])
   end
 end
