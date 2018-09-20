@@ -22,9 +22,16 @@ class PostsController < ApplicationController
   end
 
   def write
-    @title = post_params[:title]
-    @content = post_params[:posts][:content]
-
+    @post = Post.find(post_params[:id])
+    puts @post.title
+    @post[:title] = post_params[:title]
+    puts @post.title
+    @post[:slug] = post_params[:slug]
+    @post[:content] = post_params[:posts][:content]
+    puts @post.content
+    @post[:status] = post_params[:status]
+    @post[:excerpt] = post_params[:excerpt]
+    @post.save
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       # Make sure we're up to date
@@ -35,12 +42,13 @@ class PostsController < ApplicationController
         f.puts "+++"
         f.puts ""
         f.puts "+++"
-        f << @content
+        f.puts @post[:content]
       }
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS - writing a post"')
       system('git push');
     end
+    redirect_to posts_path
   end
 
   def destroy
