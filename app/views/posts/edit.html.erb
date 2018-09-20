@@ -9,15 +9,15 @@
   <%= form_for :posts, url: "write" do |form| %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   Title
-  <%= text_field_tag 'title', @front_matter["title"], class: "form-control" %>
+  <%= text_field_tag 'title', @post["title"], class: "form-control" %>
 
-  <%= form.cktext_area 'content', value: @content %>
+  <%= form.cktext_area 'content', value: @post["content"] %>
   Slug
-  <%= text_field_tag 'slug', @front_matter["slug"], class: "form-control" %>
+  <%= text_field_tag 'slug', @post["slug"], class: "form-control" %>
   Status
-  <%= text_field_tag 'status', @front_matter["status"], class: "form-control" %>
+  <%= text_field_tag 'status', @post["status"], class: "form-control" %>
   Excerpt
-  <%= text_area_tag 'excerpt', @front_matter["excerpt"], class: "form-control" %>
+  <%= text_area_tag 'excerpt', @post["excerpt"], class: "form-control" %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>

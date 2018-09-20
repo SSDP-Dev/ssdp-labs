@@ -18,10 +18,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    lines = File.read('./lib/assets/managed_site/content/blog/' + post_params[:file] + '.md')
-    @file = post_params[:file]
-    @front_matter = TomlRB.parse(lines.split("+++")[1])
-    @content = lines.split("+++")[2]
+    @post = Post.find(post_params[:file])
   end
 
   def write
