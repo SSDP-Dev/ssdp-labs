@@ -70,10 +70,38 @@ end
 
 def post_params(page)
   response_body_json = get_wp_data(page)
-  # Since we haven't massaged the data from the response body
-  # Return nil for now
-  # TODO: set the parameters correctly
-  return nil
+  params_hash = { }
+  response_body_json.each do |key, value|
+    if value
+      case key
+      when "id"
+        params_hash[:wpid] = value.to_i
+      when "type"
+        params_hash[:post_type] = value
+      when "guid"
+          params_hash[:guid] = value["rendered"].to_i
+      when "title"
+        params_hash[:title] = value["rendered"].to_s
+      when "excerpt"
+        params_hash[:excerpt] = value["rendered"].to_s
+      when "author"
+        params_hash[:author] = value.to_i
+      when "featured_media"
+        params_hash[:featured_media] = value.to_i
+      when "comment_status"
+      when "ping_status"
+      when "template"
+      when "format"
+      when "meta"
+      when "categories"
+      when "tags"
+      when "_links"
+      else
+        params_hash[key] = value
+      end
+    end
+  end
+  return params_hash
 end
 
 def get_wp_data(page)
