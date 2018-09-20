@@ -2,6 +2,8 @@ require 'net/http'
 require 'json'
 desc "Pull all of the WordPress posts from a target site into the managed repo"
 task :pull_wp_posts => :environment do
+  # Clear the posts to avoid any conflicts in case updates were made outside of labs
+  Post.delete_all
   Dir.chdir('./lib/assets/managed_site') do
     # Pull the repo using fetch/reset
     system('git fetch --all')
