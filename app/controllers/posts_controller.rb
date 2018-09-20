@@ -40,7 +40,9 @@ class PostsController < ApplicationController
       # Add files
       open('./content/blog/' + post_params[:slug] + '.md', 'w'){|f|
         f.puts "+++"
-        f.puts ""
+        @post.attributes.each_pair do |name, value|
+          f.puts """#{name} = #{value}""" 
+          end
         f.puts "+++"
         f.puts @post[:content]
       }
