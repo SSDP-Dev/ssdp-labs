@@ -59,6 +59,7 @@ class PostsController < ApplicationController
       system('git commit -m "Commit from SSDP LABS - destroying a post"')
       system('git push');
     end
+    redirect_to posts_path
   end
 
   private
