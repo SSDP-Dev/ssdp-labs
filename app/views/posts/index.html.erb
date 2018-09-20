@@ -2,7 +2,7 @@
 <h1>Posts</h1>
 <%= link_to 'New Post', posts_new_path %>
 <br>
-<%= will_paginate @files %>
+<%= will_paginate @posts %>
 <table>
   <thead>
     <tr>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @files.each do |f| %>
+    <% @posts.each do |f| %>
       <%  unless f == "." || f == ".." %>
         <tr>
           <td><%= f.title %></td>
@@ -21,4 +21,4 @@
     <% end %>
   </tbody>
 </table>
-<%= will_paginate @files %>
+<%= will_paginate @posts %>

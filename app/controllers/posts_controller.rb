@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @files = Post.paginate(:page => params[:page])
+    @posts = Post.paginate(:page => params[:page])
   end
 
   def show
