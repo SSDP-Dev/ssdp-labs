@@ -26,21 +26,25 @@ class PagesController < ApplicationController
     @page.title = page_params[:title]
     @page.slug = page_params[:slug]
     @page.content = page_params[:pages][:content]
-    @page.save
-    Dir.chdir('./lib/assets/managed_site') do
-      # Pull the repo using fetch/reset
-      # Make sure we're up to date
-      system('git fetch --all')
-      system('git reset --hard origin/master')
-      # Add files
-      open('./content/' + page_params[:slug] + '.md', 'w'){|f|
-        f << @page.content
-      }
-      system('git add -A')
-      system('git commit -m "Commit from SSDP LABS - writing a page"')
-      system('git push');
+    if @page.save
+      Dir.chdir('./lib/assets/managed_site') do
+        # Pull the repo using fetch/reset
+        # Make sure we're up to date
+        system('git fetch --all')
+        system('git reset --hard origin/master')
+        # Add files
+        open('./content/' + page_params[:slug] + '.md', 'w'){|f|
+          f << @page.content
+        }
+        system('git add -A')
+        system('git commit -m "Commit from SSDP LABS - writing a page"')
+        system('git push');
+      end
+      redirect_to pages_url
+    else
+      flash[:error] = "Something went wrong - try again"
+      redirect_to posts_new_url
     end
-    redirect_to pages_url
 
   end
   def write
