@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root                       to: 'static_pages#index'
   get  'posts',              to: 'posts#index'
   get  '/posts/new',         to: 'posts#new'
+  post '/posts/create',      to: 'posts#create'
   get  '/posts/edit',        to: 'posts#edit'
   post '/posts/write',       to: 'posts#write'
   get  '/posts/destroy',     to: 'posts#destroy'

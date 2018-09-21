@@ -21,6 +21,15 @@ class PostsController < ApplicationController
     @post = Post.find(post_params[:file])
   end
 
+  def create
+    @post = Post.new(post_params[:posts])
+    @post[:date] = DateTime.now.to_date
+    if @post.save
+      flash[:success] = "Micropost created!"
+      redirect_to posts_url
+    end
+  end
+
   def write
     @post = Post.find(post_params[:id])
     puts @post.title
@@ -45,7 +54,7 @@ class PostsController < ApplicationController
             f.puts '"' + name + '" = """' + value.to_s + '"""'
           elsif name == "content"
           else
-          f.puts '"' + name +  '"="' + value.to_s + '"'
+            f.puts '"' + name +  '"="' + value.to_s + '"'
           end
         end
         f.puts "+++"
@@ -81,6 +90,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.permit(:id, :file, :content, :title, :category, :slug, posts: [:content, :slug])
+    params.permit(:id, :file, :content, :title, :category, :slug, posts: [:content, :slug, :title, :category])
   end
 end

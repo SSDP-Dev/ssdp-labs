@@ -2,18 +2,23 @@
 <!DOCTYPE html>
 <html>
 <head>
- <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+
 </head>
 <body>
-  <%= form_for :anything, url: "write" do |form| %>
+  <%= form_for :posts, url: "create" do |form| %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
   Title
-  <%= text_field_tag 'title' %>
-  Category
-  <%= text_field_tag 'category' %>
-  File Name
-  <%= text_field_tag 'file' %>
-  <%= text_area_tag 'content' %>
+  <%= text_field_tag 'title', "", class: "form-control" %>
+
+  <%= form.cktext_area 'content' %>
+  Slug
+  <%= text_field_tag 'slug', "", class: "form-control" %>
+  Status
+  <%= text_field_tag 'status', "", class: "form-control" %>
+  Excerpt
+  <%= text_area_tag 'excerpt', "", class: "form-control" %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>
