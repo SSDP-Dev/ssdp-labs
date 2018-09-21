@@ -18,25 +18,26 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @file = post_params[:file]
-    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/' + post_params[:file])
+    @file = page_params[:file]
+    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/' + page_params[:file])
     @front_matter = @parsed_file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
     @content = @parsed_file.content #=> 'Some actual content'
   end
 
   def write
-    @file = post_params[:file]
-    @title = post_params[:title]
-    @category = post_params[:category]
-    @content = post_params[:posts][:content]
+    @page = Page.new()
+    @page.title = page_params[:title]
+    @page.title = page_params[:slug]
+    @page.content = page_params[:pages][:content]
+    @page.save
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
       # Add files
-      open('./content/' + post_params[:file], 'w'){|f|
-        f << @content
+      open('./content/' + page_params[:slug] + '.md', 'w'){|f|
+        f << @page.content
       }
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS - writing a page"')
@@ -50,7 +51,7 @@ class PagesController < ApplicationController
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
-      system('rm ./content/' + post_params[:file])
+      system('rm ./content/' + page_params[:file])
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS - destroy a page"')
       system('git push');
@@ -63,7 +64,7 @@ class PagesController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def post_params
-    params.permit(:file, :content, :title, :category, posts: [:content])
+  def page_params
+    params.permit(:file, :content, :title, :slug, :category, pages: [:content])
   end
 end
