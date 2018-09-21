@@ -41,8 +41,13 @@ class PostsController < ApplicationController
       open('./content/blog/' + post_params[:slug] + '.md', 'w'){|f|
         f.puts "+++"
         @post.attributes.each_pair do |name, value|
-          f.puts """#{name} = #{value}""" 
+          if name == "excerpt"
+            f.puts '"' + name + '" = """' + value.to_s + '"""'
+          elsif name == "content"
+          else
+          f.puts '"' + name +  '"="' + value.to_s + '"'
           end
+        end
         f.puts "+++"
         f.puts @post[:content]
       }
