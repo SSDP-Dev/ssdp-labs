@@ -63,12 +63,9 @@ class PostsController < ApplicationController
 
   def write
     @post = Post.find(post_params[:id])
-    puts @post.title
     @post[:title] = post_params[:title]
-    puts @post.title
     @post[:slug] = post_params[:slug]
     @post[:content] = post_params[:posts][:content]
-    puts @post.content
     @post[:status] = post_params[:status]
     @post[:excerpt] = post_params[:excerpt]
     @post.save
