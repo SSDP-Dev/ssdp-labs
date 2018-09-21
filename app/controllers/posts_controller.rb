@@ -22,10 +22,38 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params[:posts])
-    @post[:date] = DateTime.now.to_date
+    @post = Post.new()
+    @post.title = post_params[:title]
+    @post.slug = post_params[:slug]
+    @post.status = post_params[:status]
+    @post.excerpt = post_params[:excerpt]
+    @post.content = post_params[:posts][:content]
+    @post[:date] = DateTime.now
     if @post.save
       flash[:success] = "Micropost created!"
+      Dir.chdir('./lib/assets/managed_site') do
+        # Pull the repo using fetch/reset
+        # Make sure we're up to date
+        system('git fetch --all')
+        system('git reset --hard origin/master')
+        # Add files
+        open('./content/blog/' + post_params[:slug] + '.md', 'w'){|f|
+          f.puts "+++"
+          @post.attributes.each_pair do |name, value|
+            if name == "excerpt"
+              f.puts '"' + name + '" = """' + value.to_s + '"""'
+            elsif name == "content"
+            else
+              f.puts '"' + name +  '"="' + value.to_s + '"'
+            end
+          end
+          f.puts "+++"
+          f.puts @post[:content]
+        }
+        system('git add -A')
+        system('git commit -m "Commit from SSDP LABS - writing a post"')
+        system('git push');
+      end
       redirect_to posts_url
     end
   end
