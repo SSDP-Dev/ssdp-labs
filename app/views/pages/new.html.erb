@@ -2,14 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
- <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=wom6va3lf95xf7fc6otpv74f5iukcppqusgtw5t06ehrc9zv"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+
 </head>
 <body>
-  <%= form_for :posts, authenticity_token: true, url: "write" do |form| %>
-  File Name
-  <%= text_field_tag 'file', @file %>
-  <%= text_area_tag 'content', @content %>
+  <%= form_for :pages, authenticity_token: true, url: "write" do |form| %>
+  Slug
+  <%= text_field_tag 'file', "", class: "form-control", :required => true  %>
+  Title
+  <%= text_field_tag 'title', "", class: "form-control", :required => true %>
+  <%= form.cktext_area 'content', :required => true  %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>
