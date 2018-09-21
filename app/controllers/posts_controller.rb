@@ -56,6 +56,9 @@ class PostsController < ApplicationController
       end
       redirect_to posts_url
     end
+  else
+    flash[:error] = "Something went wrong - try again"
+    redirect_to posts_new_url
   end
 
   def write
