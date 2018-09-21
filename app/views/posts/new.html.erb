@@ -10,15 +10,15 @@
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
   Title
-  <%= text_field_tag 'title', "", class: "form-control" %>
+  <%= text_field_tag 'title', "", class: "form-control", :required => true %>
 
-  <%= form.cktext_area 'content' %>
+  <%= form.cktext_area 'content', :required => true %>
   Slug
-  <%= text_field_tag 'slug', "", class: "form-control" %>
+  <%= text_field_tag 'slug', "", class: "form-control", :required => true %>
   Status
-  <%= text_field_tag 'status', "", class: "form-control" %>
+  <%= text_field_tag 'status', "", class: "form-control", :required => true %>
   Excerpt
-  <%= text_area_tag 'excerpt', "", class: "form-control" %>
+  <%= text_area_tag 'excerpt', "", class: "form-control", :required => true %>
   <%= form.submit 'Save'  %>
 <% end  %>
 </form>

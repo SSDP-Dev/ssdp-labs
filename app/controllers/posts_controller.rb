@@ -103,7 +103,7 @@ class PostsController < ApplicationController
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
-      system('rm ./content/blog/' + post_params[:file])
+      system('rm ./content/blog/' + post_params[:file] + '.md')
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS - destroying a post"')
       system('git push');
