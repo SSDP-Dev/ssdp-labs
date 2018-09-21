@@ -59,6 +59,10 @@ class PagesController < ApplicationController
       system('git fetch --all')
       system('git reset --hard origin/master')
       # Add files
+      # Remove file if we've renamed it
+      if page_params[:oldslug] != page_params[:slug]
+        system ('rm ./content/' + page_params[:oldslug] + '.md')
+      end
       open('./content/' + page_params[:slug] + '.md', 'w'){|f|
         f << @page.content
       }
@@ -93,6 +97,6 @@ class PagesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def page_params
-    params.permit(:file, :content, :title, :slug, :category, :id, pages: [:content])
+    params.permit(:file, :content, :title, :slug, :category, :id, :oldslug, pages: [:content])
   end
 end
