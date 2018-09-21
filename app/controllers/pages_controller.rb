@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   def write
     @page = Page.new()
     @page.title = page_params[:title]
-    @page.title = page_params[:slug]
+    @page.slug = page_params[:slug]
     @page.content = page_params[:pages][:content]
     @page.save
     Dir.chdir('./lib/assets/managed_site') do
@@ -43,19 +43,25 @@ class PagesController < ApplicationController
       system('git commit -m "Commit from SSDP LABS - writing a page"')
       system('git push');
     end
+    redirect_to pages_url
+
   end
 
   def destroy
+    @page = Page.find(page_params[:id])
+
     Dir.chdir('./lib/assets/managed_site') do
       # Pull the repo using fetch/reset
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
-      system('rm ./content/' + page_params[:file])
+      system('rm ./content/' + @page.slug + '.md')
       system('git add -A')
       system('git commit -m "Commit from SSDP LABS - destroy a page"')
       system('git push');
     end
+    @page.destroy
+    redirect_to pages_url
   end
 
   private
@@ -65,6 +71,6 @@ class PagesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def page_params
-    params.permit(:file, :content, :title, :slug, :category, pages: [:content])
+    params.permit(:file, :content, :title, :slug, :category, :id, pages: [:content])
   end
 end

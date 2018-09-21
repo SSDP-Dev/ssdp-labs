@@ -16,7 +16,7 @@
         <tr>
           <td><%= f.title %></td>
           <td><%= link_to 'Edit', pages_edit_path(:file => f) %></td>
-          <td><%= link_to 'Destroy', pages_destroy_path(:file => f), data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', pages_destroy_path(:id => f.id, :file => f.slug), data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     <% end %>
