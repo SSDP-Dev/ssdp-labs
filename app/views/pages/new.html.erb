@@ -6,7 +6,7 @@
 
 </head>
 <body>
-  <%= form_for :pages, url: "write" do |form| %>
+  <%= form_for :pages, url: "create" do |form| %>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   Slug
   <%= text_field_tag 'slug', "", class: "form-control", :required => true  %>

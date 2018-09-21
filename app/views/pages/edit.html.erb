@@ -6,15 +6,17 @@
 
 </head>
 <body>
-  <%= form_for :posts, authenticity_token: true, url: "write" do |form| %>
-  <% @front_matter.each do |key, value| %>
-  <%= key %>
-  <%= text_field_tag key, value %>
-  <% end %>
-  File Name
-  <%= text_field_tag 'file', @file %>
-  <%= form.cktext_area 'content', value: @content %>
+  <%= form_for :pages, url: "write" do |form| %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :id, @page.id %>
+
+  Slug
+  <%= text_field_tag 'slug', @page.slug, class: "form-control", :required => true  %>
+  Title
+  <%= text_field_tag 'title', @page.title, class: "form-control", :required => true %>
+  <%= form.cktext_area 'content', value: @page["content"]  %>
   <%= form.submit 'Save'  %>
+
 <% end  %>
 </form>
 <%= link_to 'Back', pages_path %>

@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get  '/pages/new',         to: 'pages#new'
   get  '/pages/edit',        to: 'pages#edit'
   post '/pages/write',       to: 'pages#write'
+  post '/pages/create',      to: 'pages#create'
   get  '/pages/destroy',     to: 'pages#destroy'
 end

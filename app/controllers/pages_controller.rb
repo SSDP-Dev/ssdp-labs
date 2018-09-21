@@ -3,10 +3,10 @@ require 'yaml'
 require 'will_paginate/array'
 
 class PagesController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_page, only: [:show, :edit, :update, :destroy]
 
-  # GET /posts
-  # GET /posts.json
+  # GET /pages
+  # GET /pages.json
   def index
     @pages = Page.paginate(:page => params[:page]).order('created_at DESC')
   end
@@ -18,13 +18,10 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @file = page_params[:file]
-    @parsed_file = FrontMatterParser::Parser.parse_file('./lib/assets/managed_site/content/' + page_params[:file])
-    @front_matter = @parsed_file.front_matter #=> {'title' => 'Hello World', 'category' => 'Greetings'}
-    @content = @parsed_file.content #=> 'Some actual content'
+    @page = Page.find(page_params[:file])
   end
 
-  def write
+  def create
     @page = Page.new()
     @page.title = page_params[:title]
     @page.slug = page_params[:slug]
@@ -46,6 +43,27 @@ class PagesController < ApplicationController
     redirect_to pages_url
 
   end
+  def write
+    @page = Page.find(page_params[:id])
+    @page[:title] = page_params[:title]
+    @page[:slug] = page_params[:slug]
+    @page[:content] = page_params[:pages][:content]
+    @page.save
+    Dir.chdir('./lib/assets/managed_site') do
+      # Pull the repo using fetch/reset
+      # Make sure we're up to date
+      system('git fetch --all')
+      system('git reset --hard origin/master')
+      # Add files
+      open('./content/' + page_params[:slug] + '.md', 'w'){|f|
+        f << @page.content
+      }
+      system('git add -A')
+      system('git commit -m "Commit from SSDP LABS - writing a page"')
+      system('git push');
+    end
+    redirect_to pages_path
+  end
 
   def destroy
     @page = Page.find(page_params[:id])
@@ -66,7 +84,7 @@ class PagesController < ApplicationController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_post
+  def set_page
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
