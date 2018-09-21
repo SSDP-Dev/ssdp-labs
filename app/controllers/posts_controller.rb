@@ -74,6 +74,9 @@ class PostsController < ApplicationController
       # Make sure we're up to date
       system('git fetch --all')
       system('git reset --hard origin/master')
+      if post_params[:oldslug] != post_params[:slug]
+        system ('rm ./content/blog/' + post_params[:oldslug] + '.md')
+      end
       # Add files
       open('./content/blog/' + post_params[:slug] + '.md', 'w'){|f|
         f.puts "+++"
@@ -118,6 +121,6 @@ class PostsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.permit(:id, :file, :content, :title, :category, :slug, posts: [:content, :slug, :title, :category])
+    params.permit(:id, :file, :content, :title, :category, :slug, :oldslug, posts: [:content, :slug, :title, :category])
   end
 end
