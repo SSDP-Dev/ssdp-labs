@@ -55,10 +55,11 @@ class PostsController < ApplicationController
         system('git push');
       end
       redirect_to posts_url
+    else
+      flash[:error] = "Something went wrong - try again"
+      redirect_to posts_new_url
     end
-  else
-    flash[:error] = "Something went wrong - try again"
-    redirect_to posts_new_url
+
   end
 
   def write
