@@ -4,7 +4,7 @@ desc "Pull all of the WordPress posts from a target site into the managed repo"
 task :pull_wp_posts => :environment do
   # Clear the posts to avoid any conflicts in case updates were made outside of labs
   Post.delete_all
-  Dir.chdir('./lib/assets/managed_site') do
+  Dir.chdir('lib/assets/managed_site') do
     # Pull the repo using fetch/reset
     system('git fetch --all')
     system('git reset --hard origin/master');
@@ -21,7 +21,7 @@ task :pull_wp_posts => :environment do
     Post.create(post_params(i.to_s))
     puts "Finished " + i.to_s + " out of " + wp_total.to_s
   end
-  Dir.chdir('./lib/assets/managed_site') do
+  Dir.chdir('lib/assets/managed_site') do
     system('git add -A')
     system('git commit -m "Commit from SSDP LABS - pulling down the WP posts"')
     system('git push');
@@ -33,7 +33,7 @@ def write_blog_post(page)
   slug = response_body_json["slug"]
   type = response_body_json["type"]
   if type == "post"
-    post_path = './lib/assets/managed_site/content/blog/' + slug + '.md'
+    post_path = 'lib/assets/managed_site/content/blog/' + slug + '.md'
     open(post_path, 'w') { |f|
       f.puts "+++"
     }
