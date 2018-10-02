@@ -106,5 +106,36 @@ Create an alternative user - this is the user from which your app will run.
 ### Step 6
 Add SSH to the new user
 
-  Adding SSH to this new user will make logging in much easier. You should have
-  set up an SSH key through the process in [step 3](#step-3)
+Adding SSH to this new user will make logging in much easier. You should have
+set up an SSH key through the process in [step 3](#step-3).
+
+Switch to the 'rails' user on the remote machine.
+
+  ```bash
+    # Digital Ocean
+    > su - rails
+  ```
+
+Next, create a a new directory and set its permissions:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > mkdir .ssh
+    > chmod 700 .ssh
+  ```
+
+Then, create a file in .ssh and open it in the text editor:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > nano .ssh/authorized_keys
+  ```
+Paste your public key in here and save and exit the file with `CTRL-X`, then `Y`,
+then `ENTER`. TODO: ADD WHAT TO LOOK FOR IN KEY
+
+Set the permissions of the `authorized_keys` file to read and write with:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > chmod 600 .ssh/authorized_keys
+  ```
