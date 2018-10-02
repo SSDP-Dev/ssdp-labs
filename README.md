@@ -40,17 +40,62 @@ account.
 deployment. *Digital Ocean project management may change, and you should refer
 to their docs for help if you need it.*
 
+Up next, we'll be doing the full deploy. I followed most of the instructions found
+at [thegreatcodeadventure blog](https://www.thegreatcodeadventure.com/deploying-rails-to-digitalocean-the-hard-way/),
+but I'll be reiterating them here for further reference and clarification as it
+pertains to this app specifically.
+
+<a name="step-3">
 3. Create a new droplet with the following settings:
-  - Ubuntu 18.04 x64
-  - You probably need the most minimal specs, but if you have bigger dreams,
-  go ahead and buff up the server specs.
-  - Enable Backups if you'd like. Highly recommended, but optional.
-  - For most deployments of this app, we don't need block storage. That may
-  change in the future, but for now, the app isn't optimized to take advantage
-  of something like that, anyway.
-  - Choose an optimal datacenter region: somewhere close to most of your users.
-  - Enable any additional options you'd like. For most installs, this is likely
-  unnecessary.
-  - Add an SSH key. If you need help, check out the [Digital Ocean Guide](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/)
-  - Choose a descriptive hostname
-  
+</a>
+    - Ubuntu 18.04 x64
+    - You probably need the most minimal specs, but if you have bigger dreams,
+    go ahead and buff up the server specs.
+    - Enable Backups if you'd like. Highly recommended, but optional.
+    - For most deployments of this app, we don't need block storage. That may
+    change in the future, but for now, the app isn't optimized to take advantage
+    of something like that, anyway.
+    - Choose an optimal datacenter region: somewhere close to most of your users.
+    - Enable any additional options you'd like. For most installs, this is likely
+    unnecessary.
+    - Add an SSH key. If you need help, check out the [Digital Ocean Guide](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/)
+    - Choose a descriptive hostname
+
+4. SSH into the server. You should be able to run
+      ```bash
+        ssh root@YOUR.IP.ADDRESS.HERE
+      ```
+    in the terminal. OpenSSH will ask you to confirm you want to connect to the server.
+    Select yes and if your SSH key is configured correctly, you should be connected.
+    If all went well, your terminal will look like
+
+      ```bash
+        root@YOURHOSTNAMEHERE:~#
+      ```
+
+5. Create an alternative user - this is the user from which your app will run.
+
+    In the terminal, run:
+
+    ```bash
+      # in the remote machine
+      > adduser rails
+    ```
+
+    This will create a user named 'rails'
+
+    You'll be asked to add a password. Choose a good password and store it securely.
+    You can skip all the additional info you'll be prompted to enter.
+
+    We'll want the 'rails' user to be able to run the `sudo` command. Here's how
+    we can ensure that. Run:
+
+    ```bash
+      # in the remote machine
+      > gpasswd -a rails sudo
+    ```
+
+6. Add SSH to the new user
+
+    Adding SSH to this new user will make logging in much easier. You should have
+    set up an SSH key through the process in [step 3](#step-three)
