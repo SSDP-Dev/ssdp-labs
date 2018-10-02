@@ -71,6 +71,7 @@ SSH into the server. You should be able to run
 ```bash
   ssh root@YOUR.IP.ADDRESS.HERE
 ```
+
 in the terminal. OpenSSH will ask you to confirm you want to connect to the server.
 Select yes and if your SSH key is configured correctly, you should be connected.
 If all went well, your terminal will look like
