@@ -81,20 +81,20 @@ SSH into the server. You should be able to run
 ### Step 5
 Create an alternative user - this is the user from which your app will run.
 
-    In the terminal, run:
+  In the terminal, run:
 
     ```bash
       # in the remote machine
       > adduser rails
     ```
 
-    This will create a user named 'rails'
+  This will create a user named 'rails'
 
-    You'll be asked to add a password. Choose a good password and store it securely.
-    You can skip all the additional info you'll be prompted to enter.
+  You'll be asked to add a password. Choose a good password and store it securely.
+  You can skip all the additional info you'll be prompted to enter.
 
-    We'll want the 'rails' user to be able to run the `sudo` command. Here's how
-    we can ensure that. Run:
+  We'll want the 'rails' user to be able to run the `sudo` command. Here's how
+  we can ensure that. Run:
 
     ```bash
       # in the remote machine
@@ -104,5 +104,5 @@ Create an alternative user - this is the user from which your app will run.
 ### Step 6
 Add SSH to the new user
 
-    Adding SSH to this new user will make logging in much easier. You should have
-    set up an SSH key through the process in [step 3](#step-3)
+  Adding SSH to this new user will make logging in much easier. You should have
+  set up an SSH key through the process in [step 3](#step-3)
