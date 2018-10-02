@@ -33,10 +33,14 @@ Digital Ocean spins up Ubuntu 18.04 on their Droplets, and this app was develope
 on Ubuntu 18.04, so if you can get a machine running that, you'll likely run into
 the fewest stumbling blocks.
 
-1. Sign up and/or log in to a [Digital Ocean](https://www.digitalocean.com/)
+### Step 1
+
+Sign up and/or log in to a [Digital Ocean](https://www.digitalocean.com/)
 account.
 
-2. Create a new project or open an existing project you intend to use for this
+### Step 2
+
+Create a new project or open an existing project you intend to use for this
 deployment. *Digital Ocean project management may change, and you should refer
 to their docs for help if you need it.*
 
@@ -45,9 +49,9 @@ at [thegreatcodeadventure blog](https://www.thegreatcodeadventure.com/deploying-
 but I'll be reiterating them here for further reference and clarification as it
 pertains to this app specifically.
 
-<a name="step-3">
-3. Create a new droplet with the following settings:
-</a>
+
+### Step 3
+Create a new droplet with the following settings:
     - Ubuntu 18.04 x64
     - You probably need the most minimal specs, but if you have bigger dreams,
     go ahead and buff up the server specs.
@@ -98,4 +102,4 @@ pertains to this app specifically.
 6. Add SSH to the new user
 
     Adding SSH to this new user will make logging in much easier. You should have
-    set up an SSH key through the process in [step 3](#step-three)
+    set up an SSH key through the process in [step 3](#Step 3)
