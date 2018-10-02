@@ -52,41 +52,42 @@ pertains to this app specifically.
 
 ### Step 3
 Create a new droplet with the following settings:
-    - Ubuntu 18.04 x64
-    - You probably need the most minimal specs, but if you have bigger dreams,
-    go ahead and buff up the server specs.
-    - Enable Backups if you'd like. Highly recommended, but optional.
-    - For most deployments of this app, we don't need block storage. That may
-    change in the future, but for now, the app isn't optimized to take advantage
-    of something like that, anyway.
-    - Choose an optimal datacenter region: somewhere close to most of your users.
-    - Enable any additional options you'd like. For most installs, this is likely
-    unnecessary.
-    - Add an SSH key. If you need help, check out the [Digital Ocean Guide](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/)
-    - Choose a descriptive hostname
+  - Ubuntu 18.04 x64
+  - You probably need the most minimal specs, but if you have bigger dreams,
+  go ahead and buff up the server specs.
+  - Enable Backups if you'd like. Highly recommended, but optional.
+  - For most deployments of this app, we don't need block storage. That may
+  change in the future, but for now, the app isn't optimized to take advantage
+  of something like that, anyway.
+  - Choose an optimal datacenter region: somewhere close to most of your users.
+  - Enable any additional options you'd like. For most installs, this is likely
+  unnecessary.
+  - Add an SSH key. If you need help, check out the [Digital Ocean Guide](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/)
+  - Choose a descriptive hostname
 
 ### Step 4
 SSH into the server. You should be able to run
-      ```bash
-        ssh root@YOUR.IP.ADDRESS.HERE
-      ```
+
+    ```bash
+      ssh root@YOUR.IP.ADDRESS.HERE
+    ```
     in the terminal. OpenSSH will ask you to confirm you want to connect to the server.
     Select yes and if your SSH key is configured correctly, you should be connected.
     If all went well, your terminal will look like
 
-      ```bash
-        root@YOURHOSTNAMEHERE:~#
-      ```
+    ```bash
+      root@YOURHOSTNAMEHERE:~#
+    ```
 
 ### Step 5
 Create an alternative user - this is the user from which your app will run.
 
   In the terminal, run:
 
-    ```bash
-      # in the remote machine
-      > adduser rails
-    ```
+  ```bash
+    # in the remote machine
+    > adduser rails
+  ```
 
   This will create a user named 'rails'
 
@@ -96,10 +97,10 @@ Create an alternative user - this is the user from which your app will run.
   We'll want the 'rails' user to be able to run the `sudo` command. Here's how
   we can ensure that. Run:
 
-    ```bash
-      # in the remote machine
-      > gpasswd -a rails sudo
-    ```
+  ```bash
+    # in the remote machine
+    > gpasswd -a rails sudo
+  ```
 
 ### Step 6
 Add SSH to the new user
