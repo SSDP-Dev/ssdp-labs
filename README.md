@@ -65,7 +65,8 @@ Create a new droplet with the following settings:
     - Add an SSH key. If you need help, check out the [Digital Ocean Guide](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/)
     - Choose a descriptive hostname
 
-4. SSH into the server. You should be able to run
+### Step 4
+SSH into the server. You should be able to run
       ```bash
         ssh root@YOUR.IP.ADDRESS.HERE
       ```
@@ -77,7 +78,8 @@ Create a new droplet with the following settings:
         root@YOURHOSTNAMEHERE:~#
       ```
 
-5. Create an alternative user - this is the user from which your app will run.
+### Step 5
+Create an alternative user - this is the user from which your app will run.
 
     In the terminal, run:
 
@@ -99,7 +101,8 @@ Create a new droplet with the following settings:
       > gpasswd -a rails sudo
     ```
 
-6. Add SSH to the new user
+### Step 6
+Add SSH to the new user
 
     Adding SSH to this new user will make logging in much easier. You should have
     set up an SSH key through the process in [step 3](#step-3)
