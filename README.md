@@ -68,16 +68,16 @@ Create a new droplet with the following settings:
 ### Step 4
 SSH into the server. You should be able to run
 
-    ```bash
-      ssh root@YOUR.IP.ADDRESS.HERE
-    ```
-    in the terminal. OpenSSH will ask you to confirm you want to connect to the server.
-    Select yes and if your SSH key is configured correctly, you should be connected.
-    If all went well, your terminal will look like
+```bash
+  ssh root@YOUR.IP.ADDRESS.HERE
+```
+in the terminal. OpenSSH will ask you to confirm you want to connect to the server.
+Select yes and if your SSH key is configured correctly, you should be connected.
+If all went well, your terminal will look like
 
-    ```bash
-      root@YOURHOSTNAMEHERE:~#
-    ```
+```bash
+  root@YOURHOSTNAMEHERE:~#
+```
 
 ### Step 5
 Create an alternative user - this is the user from which your app will run.
