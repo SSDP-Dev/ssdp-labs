@@ -102,4 +102,4 @@ Create a new droplet with the following settings:
 6. Add SSH to the new user
 
     Adding SSH to this new user will make logging in much easier. You should have
-    set up an SSH key through the process in [step 3](#Step 3)
+    set up an SSH key through the process in [step 3](#step-3)
