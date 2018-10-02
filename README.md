@@ -32,3 +32,25 @@ and persistent storage should work for deployment.
 Digital Ocean spins up Ubuntu 18.04 on their Droplets, and this app was developed
 on Ubuntu 18.04, so if you can get a machine running that, you'll likely run into
 the fewest stumbling blocks.
+
+1. Sign up and/or log in to a [Digital Ocean](https://www.digitalocean.com/)
+account.
+
+2. Create a new project or open an existing project you intend to use for this
+deployment. *Digital Ocean project management may change, and you should refer
+to their docs for help if you need it.*
+
+3. Create a new droplet with the following settings:
+  - Ubuntu 18.04 x64
+  - You probably need the most minimal specs, but if you have bigger dreams,
+  go ahead and buff up the server specs.
+  - Enable Backups if you'd like. Highly recommended, but optional.
+  - For most deployments of this app, we don't need block storage. That may
+  change in the future, but for now, the app isn't optimized to take advantage
+  of something like that, anyway.
+  - Choose an optimal datacenter region: somewhere close to most of your users.
+  - Enable any additional options you'd like. For most installs, this is likely
+  unnecessary.
+  - Add an SSH key. If you need help, check out the [Digital Ocean Guide](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/)
+  - Choose a descriptive hostname
+  
