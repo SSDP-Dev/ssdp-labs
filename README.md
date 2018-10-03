@@ -260,3 +260,25 @@ Apt-get and install Node
     > sudo apt-get update
     > sudo apt-get install nodejs
   ```
+
+### Step 11
+Configure Git
+
+Set up your GitHub credentials by running:
+
+  ```bash
+    # Digital Ocean - rails user
+    > git config --global user.name "Your Name"
+    > git config --global user.email "youremail@domain.com"
+  ```
+
+Now let's set up SSH with GitHub. Generate a key with ssh-keygen. Run:
+
+  ```bash
+    # Digital Oean - rails user
+    > ssh-keygen
+  ```
+
+Hit enter to confirm the default location and leave the passphrase empty. Now
+copy the key using `cat /home/rails/.ssh/id_rsa.pub`. Then add this SSH key to
+your GitHub settings. [Here's how](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
