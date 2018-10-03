@@ -102,3 +102,21 @@ Run the following commands on the server to install RVM
     curl -sSL https://get.rvm.io | sudo bash -s stable
     sudo usermod -a -G rvm `whoami`
   ```
+
+In order to use RVM, you need to log out and log back into the server. Run:
+
+  ```bash
+    # Digital ocean - root
+    exit
+    # Local machine
+    ssh root@YOUR.IP.ADDRESS.HERE
+  ```
+
+Install Ruby 2.4.1. SSDP LABS was built on a machine running this version of
+Ruby, so we should keep it locked in. Run:
+
+  ```bash
+    # Digital Ocean - root
+    rvm install ruby-2.4.1
+    rvm --default user ruby-2.4.1
+  ```
