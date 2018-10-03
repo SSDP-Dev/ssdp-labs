@@ -135,4 +135,54 @@ asset pipeline. Run:
   ```
 
 ### Step 6
-Install Passenger + Nginx
+Install Nginx
+
+The Passenger docs assume Nginx is already installed. It won't be, if you've
+followed along here. So we need to do that using the [Digital Ocean docs](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart).
+
+Fortunately, it's pretty simple. Just run:
+
+  ```bash
+    # Digital Ocean - root
+    sudo apt update
+    sudo apt install nginx
+  ```
+
+We'll follow that doc and set up the firewall as well. Run:
+
+    ```bash
+      # Digital Ocean - root
+      sudo ufw allow 'Nginx HTTP'
+    ```
+
+Check that it worked by typing `systemctl status nginx`
+
+You should see a `active (running)` message in the terminal. You can also verify
+by visiting http://YOUR.IP.ADDRESS.HERE and verifying an Nginx welcome message.
+
+### Step 7
+Now that we have Nginx installed, it's time to install Passenger packages
+
+Install the PGP keys and add HTTPS support for APT by running:
+
+  ```bash
+    # Digital Ocean - root
+    sudo apt-get install -y dirmngr gnupg
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+    sudo apt-get install -y apt-transport-https ca-certificates
+  ```
+
+Add the Phusion Passenger APT repository
+
+  ```bash
+    # Digital ocean - root
+    sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger bionic main > /etc/apt/sources.list.d/passenger.list'
+    sudo apt-get update
+  ```
+
+Install the Passenger + Nginx module
+
+  ```bash
+    # Digital ocean - root
+    sudo apt-get install -y libnginx-mod-http-passenger
+  ```
