@@ -282,3 +282,15 @@ Now let's set up SSH with GitHub. Generate a key with ssh-keygen. Run:
 Hit enter to confirm the default location and leave the passphrase empty. Now
 copy the key using `cat /home/rails/.ssh/id_rsa.pub`. Then add this SSH key to
 your GitHub settings. [Here's how](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+### Step 12
+Install Passenger and Nginx, following the [Passenger deploy instructions](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/trusty/install_passenger.html)
+
+Install a PGP key:
+
+  ```bash
+    # Digital Ocean - rails user    
+    > sudo apt-get install -y dirmngr gnupg
+    > sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
+    > sudo apt-get install -y apt-transport-https ca-certificates
+  ```
