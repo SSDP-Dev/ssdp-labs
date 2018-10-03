@@ -244,4 +244,19 @@ Rbenv needs to run rehash every time you install a gem which includes binaries.
 ### Step 10
 Installing Javascript Runtime
 
-We use the Javascript runtime for the asset pipeline, so we need to get Node.js. 
+We use the Javascript runtime for the asset pipeline, so we need to get Node.js.
+
+Add the Node PPA to apt-get by running:
+
+  ```bash
+    # Digital Ocean - rails user
+    > sudo add-apt-repository ppa:chris-lea/node.js
+  ```
+
+Apt-get and install Node
+
+  ```bash
+    # Digital Ocean - rails user
+    > sudo apt-get update
+    > sudo apt-get install nodejs
+  ```
