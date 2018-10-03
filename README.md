@@ -106,7 +106,7 @@ Run the following commands on the server to install RVM
 In order to use RVM, you need to log out and log back into the server. Run:
 
   ```bash
-    # Digital ocean - root
+    # Digital Ocean - root
     exit
     # Local machine
     ssh root@YOUR.IP.ADDRESS.HERE
@@ -175,7 +175,7 @@ Install the PGP keys and add HTTPS support for APT by running:
 Add the Phusion Passenger APT repository
 
   ```bash
-    # Digital ocean - root
+    # Digital Ocean - root
     sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger bionic main > /etc/apt/sources.list.d/passenger.list'
     sudo apt-get update
   ```
@@ -183,6 +183,120 @@ Add the Phusion Passenger APT repository
 Install the Passenger + Nginx module
 
   ```bash
-    # Digital ocean - root
+    # Digital Ocean - root
     sudo apt-get install -y libnginx-mod-http-passenger
+  ```
+
+### Step 8
+Enable the Passenger Nginx module and restart Nginx
+
+Run:
+
+  ```bash
+    # Digital Ocean - root
+    if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi
+    sudo ls /etc/nginx/conf.d/mod-http-passenger.conf
+  ```
+
+Restart Nginx
+
+  ```bash
+    # Digital Ocean - root
+    sudo service nginx restart
+  ```
+
+### Step 9
+Check your installation
+
+Validate the install by running:
+
+  ```bash
+    # Digital Ocean - root
+    sudo /usr/bin/passenger-config validate-install
+  ```
+
+You should get an `everything looks good` message from Passenger. If you don't,
+Passenger will give you some suggestions for troubleshooting.
+
+Finally, check if Nginx has started the Passenger core processes. Run
+`sudo /usr/sbin/passenger-memory-stats` and you should see Nginx processes as
+well as Passenger processes.
+
+### Step 10
+Update
+
+Now that you've got most of the core requirements set up, it's good practice to
+run some updates. Run:
+
+  ```bash
+    # Digital Ocean - root
+    sudo apt-get update
+    sudo apt-get upgrade
+  ```
+
+### Step 11
+Create a user for the app.
+
+We want to run the app under its own user for security and sandboxing reasons.
+You can create a user called `labsuser` by running the command:
+
+  ```bash
+    # Digital Ocean - root
+    sudo adduser labsuser
+  ```
+
+Provide a password as prompted, and store it securely. You can leave the rest of
+the prompts blank, if you'd like.
+
+### Step 12
+Give the user your SSH key
+
+To keep your SSH flow working well, run the following commands, assuming your
+username is `labsuser` as set up in [Step 11](#step-11)
+
+  ```bash
+    # Digital Ocean - root
+    sudo mkdir -p ~labsuser/.ssh
+    touch $HOME/.ssh/authorized_keys
+    sudo sh -c "cat $HOME/.ssh/authorized_keys >> ~labsuser/.ssh/authorized_keys"
+    sudo chown -R labsuser: ~labsuser/.ssh
+    sudo chmod 700 ~labsuser/.ssh
+    sudo sh -c "chmod 600 ~labsuser/.ssh/*"
+  ```
+
+### Step 13
+Pull the code
+
+We're going to permanently store the app's code in `/var/www/labs`. We need to
+make that directory by running:
+
+  ```bash
+    # Digital Ocean - root
+    sudo mkdir -p /var/www/labs
+    sudo chown labsuser: /var/www/labs
+  ```
+
+In order to properly use SSH with GitHub, we need to create an SSH key for the
+app user and add it to GitHub. The following commands will switch over to our
+labsuser, configure the user's Git profile, and generate an SSH key.
+
+  ```bash
+    # Digital Ocean - root
+    su - labsuser
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@domain.com"
+    ssh-keygen
+  ```
+
+When you run `ssh-keygen`, you can leave all the options blank and press enter.
+This will create a default SSH key. Next up, use `cat /home/labsuser/.ssh/id_rsa.pub`
+to output the SSH key to the terminal. You can add that key to your GitHub profile
+by [following GitHub's instructions](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+Log out of the labsuser by typing `exit`. Now we can finally clone the repo. Run:
+
+  ```bash
+    # Digital Ocean - root
+    cd /var/www/labs
+    sudo -u labsuser -H git clone git@github.com:ogdenstudios/github-clone.git code
   ```
