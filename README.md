@@ -120,3 +120,19 @@ Ruby, so we should keep it locked in. Run:
     rvm install ruby-2.4.1
     rvm --default user ruby-2.4.1
   ```
+
+This is a good time to grab a coffee. Installing and compiling Ruby will likely
+take a while.
+
+Install Bundler to manage application gem dependencies and Node.js to manage the
+asset pipeline. Run:
+
+  ```bash
+    # Digital Ocean - root
+    gem install bundler
+    sudo apt-get install -y nodejs
+    sudo ln -sf /usr/bin/nodejs /usr/local/bin/node
+  ```
+
+### Step 6
+Install Passenger + Nginx
