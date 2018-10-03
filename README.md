@@ -456,8 +456,6 @@ to accomplish these initialization steps:
 
 ### Step 17
 
-TODO: Double check this. Might not work quite correctly
-
 Set up the domain to point to the production server
 
 This process is going to vary widely from name host to name host, but essentially:
@@ -466,7 +464,11 @@ This process is going to vary widely from name host to name host, but essentiall
   - Point that domain to the IP Address provided by Digital Ocean by [following these instructions from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars)
   - SSH into the server as root using `ssh root@YOUR.IP.ADDRESS.HERE`
   - Change `server_name` in `/etc/nginx/sites-enabled/labs.conf` to mirror the
-  domain you set up.
+  domain you set up. So for example, if you bought `example.com`,
+  you would want that line to read:
+    ```
+    server_name example.com wwww.example.com
+    ```
   - Reset Nginx with `sudo service nginx restart`
 
 ### Step 18
