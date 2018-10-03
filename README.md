@@ -163,10 +163,10 @@ Fortunately, it's pretty simple. Just run:
 
 We'll follow that doc and set up the firewall as well. Run:
 
-    ```bash
-      # Digital Ocean - root
-      sudo ufw allow 'Nginx HTTP'
-    ```
+  ```bash
+    # Digital Ocean - root
+    sudo ufw allow 'Nginx HTTP'
+  ```
 
 Check that it worked by typing `systemctl status nginx`
 
