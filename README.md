@@ -70,6 +70,7 @@ Create a new droplet with the following settings:
 SSH into the server. You should be able to run
 
   ```bash
+    # Local machine
     ssh root@YOUR.IP.ADDRESS.HERE
   ```
 
@@ -79,4 +80,25 @@ If all went well, your terminal will look like
 
   ```bash
     root@YOURHOSTNAMEHERE:~#
+  ```
+
+### Step 5
+
+Install ruby
+
+Ensure your system has curl and gpg. Run:
+
+  ```bash
+    # Digital Ocean -  root
+    sudo apt-get update
+    sudo apt-get install -y curl gnupg build-essential
+  ```
+
+Run the following commands on the server to install RVM
+
+  ```bash
+    # Digital Ocean - root
+    sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    curl -sSL https://get.rvm.io | sudo bash -s stable
+    sudo usermod -a -G rvm `whoami`
   ```
