@@ -198,7 +198,7 @@ Install rbenv and Ruby dependencies by running:
     > sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev libffi-dev
   ```
 
-*Note: in thegreatcodeadventure blog post, the `python-software-properties` package is included,
+*Note: in thegreatcodeadventure blog post, the* `python-software-properties` *package is included,
 but doesn't seem to play nicely with apt-get install, so I have removed that in this command*
 
 Install rbenv with the following commands, entering one at a time,and only the
@@ -215,3 +215,33 @@ part of that command. In total, you should run seven commands to install rbenv:
     > echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
     > source ~/.bash_profile
   ```
+
+### Step 9
+Installing Ruby
+
+SSDP LABS was developed on a machine running ruby v2.4.1, so run:
+
+  ```bash
+    # Digital Ocean - rails user
+    > rbenv install -v 2.4.1
+    > rbenv global 2.4.1
+  ```
+
+You can ensure it worked by running `> ruby -v` and 2.4.1 should be returned.
+
+After you've got ruby set up, you'll want to install bundler and rails, running:
+
+  ```bash
+    # Digital Ocean - rails user
+    > gem install bundler
+    > gem install rails
+    > rbenv rehash
+  ```
+
+The `rbenv rehash` command may be unfamiliar if you haven't used rbenv before.
+Rbenv needs to run rehash every time you install a gem which includes binaries.
+
+### Step 10
+Installing Javascript Runtime
+
+We use the Javascript runtime for the asset pipeline, so we need to get Node.js. 
