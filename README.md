@@ -300,3 +300,20 @@ Log out of the labsuser by typing `exit`. Now we can finally clone the repo. Run
     cd /var/www/labs
     sudo -u labsuser -H git clone git@github.com:ogdenstudios/github-clone.git code
   ```
+
+### Step 14
+
+Prep the app's environment.
+
+These instructions need to be run as the app's user. So login to that account
+again by typing `su - labsuser`, again, assuming your app's username is `labsuser`.
+
+Tell RVM to use ruby-2.4.1 by typing `rvm use ruby-2.4.1`
+
+Run bundle install:
+
+  ```bash
+    # Digital Ocean - labsuser
+    cd /var/www/labs/code
+    bundle install --path vendor/bundle
+  ```
