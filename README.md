@@ -139,3 +139,79 @@ Set the permissions of the `authorized_keys` file to read and write with:
     # Digital Ocean - Rails user
     > chmod 600 .ssh/authorized_keys
   ```
+
+**Before moving on to [Step 7](#step-7), ensure you can SSH into the 'rails' user
+by running `ssh rails@YOUR.IP.ADDRESS.HERE` in another terminal and confirming
+it logs you in.**
+
+### Step 7
+Configure SSH for the Root User.
+
+We're going to remove root access via SSH to lock down the server a bit. Exit
+back to the root user by typing:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > exit
+  ```
+
+As your root user, open up the ssh config file by typing:
+
+  ```bash
+    # Digital Ocean - Root
+    > nano /etc/ssh/sshd_config
+  ```
+
+Find the line:
+
+  ```bash
+    # /etc/ssh/sshd_config
+    PermitRootLogin yes
+  ```
+
+Change `yes` to `no`. Save and exit with `CTRL+ X`, then `y`, then `ENTER`.
+
+Restart the SSH daemon with:
+
+  ```bash
+    # Digital Ocean - Root
+    > service ssh restart
+  ```
+
+Exit the root shell by typing in `exit` and then follow the rest of this guide
+logged in as the 'rails' user.
+
+### Step 8
+Install rbenv to manage our Ruby versions
+
+Update the apt repositories by running:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > sudo apt-get update
+  ```
+
+Install rbenv and Ruby dependencies by running:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev libffi-dev
+  ```
+
+*Note: in thegreatcodeadventure blog post, the `python-software-properties` package is included,
+but doesn't seem to play nicely with apt-get install, so I have removed that in this command*
+
+Install rbenv with the following commands, entering one at a time,and only the
+commands which come after a `>`. The double `>>` in the second to last line is
+part of that command. In total, you should run seven commands to install rbenv:
+
+  ```bash
+    # Digital Ocean - Rails user
+    > cd
+    > git clone git://github.com/sstephenson/rbenv.git .rbenv
+    > echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+    > echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+    > git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+    > echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
+    > source ~/.bash_profile
+  ```
