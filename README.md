@@ -318,7 +318,7 @@ Log out of the labsuser by typing `exit`. Now we can finally clone the repo. Run
   ```bash
     # Digital Ocean - root
     cd /var/www/labs
-    sudo -u labsuser -H git clone git@github.com:ogdenstudios/github-clone.git code
+    sudo -u labsuser -H git clone git@github.com:ogdenstudios/rails-headless-cms.git.git code
   ```
 
 ### Step 14
