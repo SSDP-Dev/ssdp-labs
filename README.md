@@ -317,3 +317,100 @@ Run bundle install:
     cd /var/www/labs/code
     bundle install --path vendor/bundle
   ```
+
+You'll need to configure the secret key. Run the following command to generate
+one.
+
+  ```bash
+    # Digital Ocean - labsuser
+    bundle exec rake secret
+  ```
+
+Copy the output of that command and store it in your environment by running:
+
+  ```bash
+    # Digital Ocean - labsuser
+    nano config/secrets.yml
+  ```
+
+At the bottom of this file, you'll want to add:
+
+  ```
+  production:
+      secret_key_base: the value that you copied from 'rake secret'
+  ```
+
+To prevent other users on the system from getting access to this info, tighten
+up the security on the config directory and database directory:
+
+  ```bash
+    # Digital Ocean - labsuser
+    chmod 700 config db
+    chmod 600 config/database.yml config/secrets.yml
+  ```
+
+TODO: This isn't the most secure way to configure it. Fortunately we have
+a pretty low-risk system here, so it works for now. We'll tweak these settings
+to provide more security in the future.
+
+Compile Rails assets and run database migrations by running:
+
+  ```bash
+    # Digital Ocean - labsuser
+    bundle exec rake assets:precompile db:migrate RAILS_ENV=production
+  ```
+
+### Step 15
+
+Configure Nginx and Passenger
+
+You can figure out which Ruby command Passenger should use by running
+`passenger-config about ruby-command`
+
+You'll see a line like `Command: /usr/local/rvm/gems/ruby-2.4.1/wrappers/ruby`
+in the output. Make a note of the path which looks like
+`/usr/local/rvm/gems/ruby-2.4.1/wrappers/ruby`
+
+Drop back to the admin account, again by typing `exit`
+
+Edit the Nginx configuration file by running:
+
+  ```bash
+    # Digital Ocean - root
+    sudo nano /etc/nginx/sites-enabled/labs.conf
+  ```
+
+And then put this in the file:
+
+  ```
+  server {
+    listen 80;
+    server_name YOUR.IP.ADDRESS.HERE;
+
+    # Tell Nginx and Passenger where your app's 'public' directory is
+    root /var/www/labs/code/public;
+
+    # Turn on Passenger
+    passenger_enabled on;
+    passenger_ruby /usr/local/rvm/gems/ruby-2.4.1/wrappers/ruby;
+  }
+  ```
+
+Note the path after `passenger_ruby` mirrors what we received from `passenger-config about ruby-command`.
+It's likely your path will be identical, but double check to make sure. If the
+path is not identical, use your output in that line instead.
+
+The server name will eventually be your domain, but for now, set it as the IP
+address provided by Digital Ocean (you can view it in the top left when you click
+  on your droplet).
+
+The root path setting should be identical if you've followed all the instructions,
+but you could have named that path something else in [step 13](#step-13).
+
+Restart Nginx with `sudo service nginx restart`.
+
+You can test the system by visiting http://YOUR.IP.ADDRESS.HERE and you should
+see the app running correctly.
+
+### Step 16
+Set up the domain to point to the production server
