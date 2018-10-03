@@ -7,7 +7,19 @@ Things you may want to cover:
 
 * Ruby version
 
-* System dependencies
+## System dependencies
+TODO:
+
+SSDP LABS solves a set of very specific organizational problems, and does so through
+a few unconventional methods.
+
+Fortunately, none of these methods are particularly challenging to understand.
+The real challenge lies in finding someone who has the specific knowledge
+of a handful of technologies.
+
+This section, in addition to outlining dependencies for the app to run, should
+encompass the sorts of technologies an adminstrator would need to brush up on
+in order to effectively maintain the app.
 
 * Configuration
 
@@ -135,6 +147,7 @@ asset pipeline. Run:
   ```
 
 ### Step 6
+
 Install Nginx
 
 The Passenger docs assume Nginx is already installed. It won't be, if you've
@@ -161,6 +174,7 @@ You should see a `active (running)` message in the terminal. You can also verify
 by visiting http://YOUR.IP.ADDRESS.HERE and verifying an Nginx welcome message.
 
 ### Step 7
+
 Now that we have Nginx installed, it's time to install Passenger packages
 
 Install the PGP keys and add HTTPS support for APT by running:
@@ -188,6 +202,7 @@ Install the Passenger + Nginx module
   ```
 
 ### Step 8
+
 Enable the Passenger Nginx module and restart Nginx
 
 Run:
@@ -206,6 +221,7 @@ Restart Nginx
   ```
 
 ### Step 9
+
 Check your installation
 
 Validate the install by running:
@@ -223,6 +239,7 @@ Finally, check if Nginx has started the Passenger core processes. Run
 well as Passenger processes.
 
 ### Step 10
+
 Update
 
 Now that you've got most of the core requirements set up, it's good practice to
@@ -235,6 +252,7 @@ run some updates. Run:
   ```
 
 ### Step 11
+
 Create a user for the app.
 
 We want to run the app under its own user for security and sandboxing reasons.
@@ -249,6 +267,7 @@ Provide a password as prompted, and store it securely. You can leave the rest of
 the prompts blank, if you'd like.
 
 ### Step 12
+
 Give the user your SSH key
 
 To keep your SSH flow working well, run the following commands, assuming your
@@ -265,6 +284,7 @@ username is `labsuser` as set up in [Step 11](#step-11)
   ```
 
 ### Step 13
+
 Pull the code
 
 We're going to permanently store the app's code in `/var/www/labs`. We need to
@@ -413,4 +433,50 @@ You can test the system by visiting http://YOUR.IP.ADDRESS.HERE and you should
 see the app running correctly.
 
 ### Step 16
+
+Initialize the app
+
+Now that we've precompiled the assets and migrated the database, SSDP LABS has
+a handful of rake tasks to complete.
+
+We need to setup the sub-module for the managed site,
+Pull the WordPress posts,
+And pull in the Pages from the sub-module.
+
+TODO: this is likely to change, so keep an eye on the rake tasks and update as
+necessary.
+
+You'll need to have access to the sub-module from your Git account. If that's
+the case, then your SSH key should work and allow you to run the following commands
+to accomplish these initialization steps:
+
+  ```bash
+    # Digital Ocean - labsuser
+    cd /var/www/labs/code
+    rake git_setup
+    rake pull_wp_posts
+    rake reset_pages
+  ```
+
+### Step 17
+
+TODO: Double check this. Might not work quite correctly
+
 Set up the domain to point to the production server
+
+This process is going to vary widely from name host to name host, but essentially:
+
+  - Set up a domain with a hosting service
+  - Point that domain to the IP Address provided by Digital Ocean by [following these instructions from Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars)
+  - SSH into the server as root using `ssh root@YOUR.IP.ADDRESS.HERE`
+  - Change `server_name` in `/etc/nginx/sites-enabled/labs.conf` to mirror the
+  domain you set up.
+  - Reset Nginx with `sudo service nginx restart`
+
+### Step 18
+
+Deploy updates to the app.
+
+TODO: We haven't had updates to push out yet, so no practical guide to it.
+Fortunately, the process should be fairly simple (famous last words). Here's
+the [Phusion Guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/digital_ocean/nginx/oss/deploy_updates.html) for it.
