@@ -17,19 +17,19 @@ This section, in addition to outlining dependencies for the app to run, should
 encompass the sorts of technologies an adminstrator would need to brush up on
 in order to effectively maintain the app.
 
-* Configuration
+## Configuration
 
-* Database creation
+## Database creation
 
-* Database initialization
+## Database initialization
 
 ## Rails Console
 
 If you need to access the rails console for anything, cd to the app directory with the app user and run `bundle exec rails console production`
 
-* How to run the test suite
+## How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Services (job queues, cache servers, search engines, etc.)
 
 ## Deployment instructions
 
