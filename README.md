@@ -449,9 +449,9 @@ to accomplish these initialization steps:
   ```bash
     # Digital Ocean - labsuser
     cd /var/www/labs/code
-    rake git_setup
-    rake pull_wp_posts
-    rake reset_pages
+    rake git_setup RAILS_ENV=production
+    rake pull_wp_posts RAILS_ENV=production
+    rake reset_pages RAILS_ENV=production
   ```
 
 ### Step 17
