@@ -38,7 +38,7 @@ class PagesController < ApplicationController
         open('./content/' + page_params[:slug] + '.md', 'w'){|f|
           f << '---'
           f << 'layout: base'
-          f << 'layout: base'
+          f << '---'
           f << @page.content
         }
         system('git add -A')
