@@ -4,6 +4,8 @@ require 'will_paginate/array'
 
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :correct_user
 
   # GET /pages
   # GET /pages.json
@@ -98,5 +100,8 @@ class PagesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def page_params
     params.permit(:file, :content, :title, :slug, :category, :id, :oldslug, pages: [:content])
+  end
+  def correct_user
+    redirect_to(root_url) unless current_user.approved == true
   end
 end
