@@ -23,6 +23,10 @@ in order to effectively maintain the app.
 
 * Database initialization
 
+## Rails Console
+
+If you need to access the rails console for anything, cd to the app directory with the app user and run `bundle exec rails console production`
+
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
