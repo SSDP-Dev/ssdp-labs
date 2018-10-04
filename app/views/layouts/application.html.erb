@@ -16,15 +16,21 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
+        <% if user_signed_in? %>
         <li class="nav-item">
           <a class="nav-link" href="<%= pages_path%>">Pages <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<%= posts_path%>">Posts <span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+        </li>
+        <% end %>
       </ul>
     </div>
   </div>
