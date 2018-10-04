@@ -36,9 +36,9 @@ class PagesController < ApplicationController
         system('git reset --hard origin/master')
         # Add files
         open('./content/' + page_params[:slug] + '.md', 'w'){|f|
-          f << '---'
-          f << 'layout: base'
-          f << '---'
+          f << "---\n"
+          f << "layout: base\n"
+          f << "---\n"
           f << @page.content
         }
         system('git add -A')
