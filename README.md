@@ -475,6 +475,42 @@ This process is going to vary widely from name host to name host, but essentiall
 
 Deploy updates to the app.
 
-TODO: We haven't had updates to push out yet, so no practical guide to it.
 Fortunately, the process should be fairly simple (famous last words). Here's
-the [Phusion Guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/digital_ocean/nginx/oss/deploy_updates.html) for it.
+the [Phusion Guide](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/digital_ocean/nginx/oss/deploy_updates.html) for it, but these docs will mirror those instructions as well.
+
+SSH into the server:
+
+  ```bash
+    # Local machine
+    ssh root@YOUR.IP.ADDRESS.HERE
+  ```
+
+Switch to the labsuser
+
+  ```bash
+    # Digital Ocean - root
+    su - labsuser
+  ```
+
+Pull the latest code from Gitinto the directory, install the app dependencies,
+compile rails assets, and run database migrations. Run:
+
+  ```bash
+    # Digital Ocean - labsuser
+    cd /var/www/labs/code
+    git pull
+    bundle install --path vendor/bundle
+    bundle exec rake assets:precompile db:migrate RAILS_ENV=production
+  ```
+
+Restart the application - Passenger may still be serving an old instance of the app.
+Run:
+
+  ```bash
+    # Digital Ocean - labsuser
+    passenger-config restart-app $(pwd)
+  ```
+
+For now, you'll need to re-run the secret key generation steps found in [Step 14](#step-14).
+Since that process isn't yet optimized for security, this process will change,
+and eventually will be stored in environment variables correctly.
