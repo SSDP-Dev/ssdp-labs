@@ -25,7 +25,9 @@ in order to effectively maintain the app.
 
 ## Rails Console
 
-If you need to access the rails console for anything, cd to the app directory with the app user and run `bundle exec rails console production`
+If you need to access the rails console for anything, cd to the app directory with root and run `bundle exec rails console production`.
+TODO: This shouldn't be the case, we don't want to have to run as root
+to run the console. Let's fix that.
 
 ## How to run the test suite
 
